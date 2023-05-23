@@ -1,0 +1,102 @@
+.benefits-wrapper {
+    margin: 180px 160px 0px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 104px;
+    width: 1600px;
+    height: 506px;
+
+    .benefits-image {
+        width: 696px;
+        height: 506px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 3px solid #FFC600;
+        border-radius: 30px;
+
+        img {
+            width: 656px;
+            height: 466px;
+            margin: 20px;
+        }
+    }
+
+    .benefits-text {
+        width: 800px;
+        height: 506px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 40px;
+
+        h1 {
+            margin: 0;
+            width: 800px;
+            height: 49px;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 49px;
+            color: #00303C;
+        }
+
+        p {
+            width: 800px;
+            height: 169px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin: 0;
+        }
+
+        h3 {
+            width: 577px;
+            height: 17px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #00303C;
+            margin: 0;
+        }
+
+        .options {
+            display: flex;
+            gap: 15px;
+            height: 14px;
+            max-width: fit-content;
+
+            >:nth-child(1)>span, :nth-child(3)>span{
+                color: #00924B;
+            }
+
+            >:nth-child(2)>span, :nth-child(4)>span {
+                color: #FFC600;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                max-width: fit-content;
+            }
+        }    
+
+        button {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 50px;
+            width: 247px;
+            height: 77px;
+            background: #FFFFFF;
+            border: 4px solid #00924B;
+            border-radius: 54px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #00924B;
+        }
+    }
+}

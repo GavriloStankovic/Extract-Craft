@@ -1,0 +1,82 @@
+.extractor-wrapper {
+    margin-top: 180px;
+    height: 705px;
+    gap: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../../assets/Subtract111.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .extractor-header {
+        width: 697px;
+        height: 49px;
+
+        h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+            color: #00303C;
+        }
+    }
+
+    .extractor-cards {
+        display: flex;
+        margin: 0px 280px;
+        gap: 100px;
+        height: 575px;
+        width: 1360px;
+        justify-content: space-between;
+        align-items: center;
+
+        .extractor-left, .extractor-center, .extractor-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+            width: 387px;
+            height: 575px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid #FFC600;
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+
+            img {
+                width: 347px;
+                height: 321px;
+                margin: 20px 20px 0 20px;
+            }
+
+            h2 {
+                width: 347px;
+                height: 17px;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                color: #00303C;
+                margin: 0 20px;
+            }
+
+            span {
+                width: 347px;
+                border: 1px solid #00303C;
+                margin: 0 20px;
+            }
+
+            h3 {
+                height: 57px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #00303C;
+                opacity: 0.5;
+                margin: 0 20px;
+            }
+        }
+    }
+}

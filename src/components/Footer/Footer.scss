@@ -1,0 +1,206 @@
+.footer-wrapper {
+    width: 100%;
+    height: 691px;
+    background: #00303C;
+    margin-top: 181px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .footer-connected {
+        display: flex;
+        margin-top: 100px;
+        align-items: center;
+        margin-left: 217px;
+        width: 1180px;
+        justify-content: space-between;
+
+        h2 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .icons {
+            display: flex;
+            gap: 40.8px;
+        }
+    }
+
+    .footer-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        margin-left: 217px;
+
+        >:nth-child(1){
+            width: 834px;
+            height: 45px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+        >:nth-child(2){
+            width: 208px;
+            height: 22px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+    }
+    .footer-email {
+        display: flex;
+        margin-left: 217px;
+        align-items: center;
+        justify-content: space-between;
+        width: 834px;
+
+        input {
+            width: 604px;
+            height: 53px;
+            background: #FFFFFF;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+        }
+
+        ::placeholder {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #00303C;
+            padding-left: 20px;
+        }
+
+        button {
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 50px;
+            width: 191px;
+            height: 53px;
+            background: #FFC600;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #00303C;
+        }
+    }
+
+    .footer-tabel {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        width: 1484px;
+        height: 77px;
+        border: 3px solid #FFFFFF;
+        border-radius: 30px;
+        margin-left: 217px;
+
+        >:nth-child(1){
+            height: 100%;
+            width: 393px;
+            border-right: 3px solid #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        >:nth-child(2){
+            height: 100%;
+            width: 300px;
+            border-right: 3px solid #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        >:nth-child(3){
+            height: 100%;
+            width: 398px;
+            border-right: 3px solid #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        >:nth-child(4){
+            height: 100%;
+            width: 393px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1484px;
+        margin-left: 217px;
+        margin-top: 30px;
+
+        h3 {
+            width: 244px;
+            height: 14px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+        
+        .links {
+            display: flex;
+            width: 316px;
+            height: 14px;
+            gap: 45px;
+            min-width: fit-content;
+
+            a {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                text-decoration-line: underline;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .last {
+        margin-left: 217px;
+        width: 340px;
+        height: 14px;
+        display: flex;
+
+        h3 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #FFFFFF;
+            margin: 0;
+
+            span {
+                color: #FFC600;
+            }
+        }
+    }
+}

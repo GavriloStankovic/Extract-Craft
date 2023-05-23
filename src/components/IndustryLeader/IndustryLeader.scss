@@ -1,0 +1,66 @@
+.industry-wrapper {
+    width: 100%;
+    margin-top: 107px;
+    height: 636px;
+    background: url(../../assets/Subtract.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .industryLeader {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0 8.33%;
+        gap: 148px;
+    
+
+        .industry-left {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            span {
+                margin-top: 8.33%;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 37px;
+                color: #00924B;
+            }
+
+            h1 {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 59px;
+                margin: 0;
+            }
+
+            button {
+                padding: 30px 50px;
+                width: 30.8%;
+                height: 77px;
+                background: #FFFFFF;
+                border: 4px solid #00303C;
+                border-radius: 54px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: #00303C;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .right-side {
+            position: absolute;
+            top: -85px;
+            right: 160px;
+            width: 642.83px;
+            height: 756.91px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

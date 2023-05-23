@@ -1,0 +1,111 @@
+.machine-wrapper {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 1050px;
+    gap: 80px;
+
+    .machine-header {
+        width: 1597px;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+            color: #00303C;
+        }
+    }
+
+    .machine-holder {
+        width: 100%;
+        height: 921px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background: url(../../assets/sub123.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        >:nth-child(1){
+            position: absolute;
+            width: 293.3px;
+            height: 430.83px;
+            left: 320.48px;
+            top: 393px;
+        }
+
+        >:nth-child(2){
+            position: absolute;
+            width: 367.28px;
+            height: 535.92px;
+            left: 1430.55px;
+            top: -32px;
+        }
+
+        .machine-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 387px;
+            height: 921px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 30px rgba(0, 48, 60, 0.1);
+            border-radius: 30px;
+            gap: 40px;
+
+            >:nth-child(1) {
+                width: 347px;
+                height: 321px;
+                margin: 20px 20px 0 20px;
+            }
+
+            >:nth-child(2){
+                width: 347px;
+                margin: 0 20px;
+            }
+
+            p {
+                margin: 0 20px 0 17px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            h1 {
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 39px;
+                align-self: center;
+                color: #00303C;
+                margin: 0;
+            }
+
+            button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 30px 50px;
+                width: 307px;
+                align-self: center;
+                height: 75px;
+                background: #FFC600;
+                border-radius: 5px;
+                font-weight: 700;
+                font-size: 24px;
+                border: none;
+                color: white;
+                line-height: 29px;
+            }
+        }
+    }
+}
