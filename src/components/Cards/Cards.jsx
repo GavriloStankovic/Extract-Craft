@@ -7,7 +7,6 @@ import blue from "../../assets/blue-honey.svg";
 const Cards = () => {
   return (
     <div className="cards-wrapper">
-      <div></div>
       <div className="cards">
         <div className="left-card">
           <img src={white} alt="" />

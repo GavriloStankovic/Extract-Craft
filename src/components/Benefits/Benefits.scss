@@ -1,29 +1,32 @@
 .benefits-wrapper {
-    margin: 180px 160px 0px 160px;
+    margin-top: 180px;
+    margin-left: 8.33%;
+    margin-right: 8.33%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 104px;
-    width: 1600px;
-    height: 506px;
+    gap: 5.25%;
+    height: auto;
+
+    .hidden-benefits {
+        display: none;
+    }
 
     .benefits-image {
-        width: 696px;
-        height: 506px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
         background: rgba(255, 255, 255, 0.1);
         border: 3px solid #FFC600;
         border-radius: 30px;
 
         img {
-            width: 656px;
-            height: 466px;
-            margin: 20px;
+            padding: 20px;
         }
     }
 
     .benefits-text {
-        width: 800px;
-        height: 506px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -31,8 +34,6 @@
 
         h1 {
             margin: 0;
-            width: 800px;
-            height: 49px;
             font-weight: 600;
             font-size: 40px;
             line-height: 49px;
@@ -40,8 +41,6 @@
         }
 
         p {
-            width: 800px;
-            height: 169px;
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
@@ -50,8 +49,6 @@
         }
 
         h3 {
-            width: 577px;
-            height: 17px;
             font-weight: 600;
             font-size: 24px;
             line-height: 29px;
@@ -88,8 +85,7 @@
             justify-content: center;
             align-items: center;
             padding: 30px 50px;
-            width: 247px;
-            height: 77px;
+            width: max-content;
             background: #FFFFFF;
             border: 4px solid #00924B;
             border-radius: 54px;
@@ -98,5 +94,114 @@
             line-height: 29px;
             color: #00924B;
         }
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .benefits-wrapper{
+        .benefits-text{
+            gap: 30px;
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 16px;
+            }
+            h3{
+                font-size: 20px;
+            }
+            .options{
+                p{
+                    font-size: 12px;
+                }
+            }
+            button {
+                padding: 15px 40px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1360px) {
+    .benefits-wrapper{
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .benefits-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .benefits-wrapper{
+        .benefits-image{
+            width: 95%;
+
+            img {
+                width: -webkit-fill-available;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .benefits-wrapper{
+        margin-top: 80px;
+        
+        .hidden-benefits{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            h1{
+                margin: 0;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                color: #00303C;
+            }
+        }
+
+        .benefits-text{
+            justify-content: flex-start;
+            align-items: flex-start;
+            h1{
+                display: none;
+            }
+            p {
+                font-size: 14px;
+                line-height: 17px;
+                display: contents;
+            }
+            h3{
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            button {
+                padding: 20px 27px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .options {
+                gap: 13px;
+                p {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+
     }
 }

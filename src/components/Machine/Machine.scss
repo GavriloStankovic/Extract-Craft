@@ -5,12 +5,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 1050px;
+    height: auto;
     gap: 80px;
 
     .machine-header {
-        width: 1597px;
-        height: 49px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,7 +24,7 @@
 
     .machine-holder {
         width: 100%;
-        height: 921px;
+        height: auto;
         display: flex;
         position: relative;
         justify-content: center;
@@ -39,28 +37,29 @@
             position: absolute;
             width: 293.3px;
             height: 430.83px;
-            left: 320.48px;
-            top: 393px;
+            left: 15%;
+            top: 40%;
         }
 
         >:nth-child(2){
             position: absolute;
             width: 367.28px;
             height: 535.92px;
-            left: 1430.55px;
-            top: -32px;
+            right: 10%;
+            top: -5%;
         }
 
         .machine-card {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            width: 387px;
-            height: 921px;
+            width: min-content;
+            height: auto;
             background: #FFFFFF;
             box-shadow: 0px 0px 30px rgba(0, 48, 60, 0.1);
             border-radius: 30px;
             gap: 40px;
+            padding-bottom: 40px;
 
             >:nth-child(1) {
                 width: 347px;
@@ -91,11 +90,10 @@
 
             button {
                 display: flex;
-                flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 padding: 30px 50px;
-                width: 307px;
+                width: max-content;
                 align-self: center;
                 height: 75px;
                 background: #FFC600;
@@ -105,6 +103,66 @@
                 border: none;
                 color: white;
                 line-height: 29px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1380px){
+    .machine-wrapper{
+        .machine-holder{
+            >:nth-child(1){
+                display: none;
+            }
+            >:nth-child(2){
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .machine-wrapper{
+        gap: 40px;
+        margin-top: 40px;
+        .machine-header{
+            width: 90%;
+            h1{
+                margin: 0;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                color: #00303C;
+            }
+        }
+        .machine-holder {
+            .machine-card {   
+                display: flex;
+                justify-content: center;
+                padding-bottom: 20px;
+                >:nth-child(1) {
+                    width: 232px;
+                    height: 239px;
+                }
+    
+                >:nth-child(2){
+                    width: 204px;
+                    align-self: center;
+                }
+    
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+    
+                h1 {
+                    font-size: 32px;
+                    line-height: 39px;
+                }
+    
+                button {
+                    padding: 30px 50px;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
             }
         }
     }

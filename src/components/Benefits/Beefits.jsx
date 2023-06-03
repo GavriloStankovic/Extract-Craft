@@ -5,6 +5,9 @@ import benefits from "../../assets/benefits.svg";
 const Beefits = () => {
   return (
     <div className="benefits-wrapper">
+      <div className="hidden-benefits">
+        <h1>Health Benefits</h1>
+      </div>
       <div className="benefits-image">
         <img src={benefits} alt="" />
       </div>

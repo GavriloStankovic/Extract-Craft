@@ -1,21 +1,19 @@
 .concentration-wrapper {
     margin-top: 180px;
     width: 100%;
-    height: 598px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 80px;
     justify-content: space-between;
 
     .cocentration-header {
-        margin: 0 160px;
+        margin: 0 8.33%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         h1 {
-            width: 591px;
-            height: 98px;
             font-weight: 600;
             font-size: 40px;
             line-height: 49px;
@@ -24,12 +22,10 @@
 
         button {
             display: flex;
-            flex-direction: row;
             justify-content: center;
             align-items: center;
             padding: 30px 50px;
             width: 247px;
-            height: 77px;
             background: #FFFFFF;
             border: 4px solid #00924B;
             border-radius: 54px;
@@ -43,16 +39,16 @@
     .concentration {
         display: flex;
         justify-content: space-between;
-        margin: 0px 160px;
-        gap: 44px;
-        width: 1600px;
+        margin: 0px 8.33%;
+        gap: 2.75%;
+        width: 83.33%;
 
         .concentration-left, .concentration-right {
-            width: 778px;
+            width: 48.625%;
             display: flex;
             flex-direction: column;
             gap: 50px;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: flex-start;
 
             span {
@@ -61,14 +57,85 @@
                 justify-content: center;
                 align-items: center;
                 padding: 30px 40px 30px 25px;
-                width: 708px;
-                height: 34px;
                 border: 3px solid #FFC600;
                 border-radius: 15px;
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 24px;
                 color: #00303C;
+            }
+        }
+        .button-hidden {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1650px) {
+    .concentration-wrapper{
+        margin-top: 90px;
+        .cocentration-header{
+            h1{
+                font-size: 36px;
+            }
+            button{
+                padding: 15px 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .concentration-wrapper{
+        .cocentration-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 30px;
+            }
+            button{
+                display: none;
+            }
+        }
+        .concentration{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            .concentration-left, .concentration-right {
+                width: 90%;
+            }
+
+            .button-hidden {
+                display: block;
+                
+                button {
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px 35px;
+                    width: max-content;
+                    background: #FFFFFF;
+                    border: 4px solid #00924B;
+                    border-radius: 54px;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 29px;
+                    color: #00924B;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .concentration-wrapper{
+        gap: 40px;
+        .cocentration-header{
+            h1{
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                margin: 0;
             }
         }
     }

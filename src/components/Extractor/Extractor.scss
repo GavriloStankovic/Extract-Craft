@@ -1,6 +1,6 @@
 .extractor-wrapper {
     margin-top: 180px;
-    height: 705px;
+    height: auto;
     gap: 80px;
     width: 100%;
     display: flex;
@@ -12,8 +12,8 @@
     background-position: center;
 
     .extractor-header {
-        width: 697px;
-        height: 49px;
+        width: auto;
+        height: auto;
 
         h1 {
             margin: 0;
@@ -27,11 +27,9 @@
 
     .extractor-cards {
         display: flex;
-        margin: 0px 280px;
-        gap: 100px;
-        height: 575px;
-        width: 1360px;
-        justify-content: space-between;
+        gap: 5.20%;
+        height: auto;
+        justify-content: center;
         align-items: center;
 
         .extractor-left, .extractor-center, .extractor-right {
@@ -39,7 +37,7 @@
             flex-direction: column;
             justify-content: flex-start;
             gap: 40px;
-            width: 387px;
+            width: min-content;
             height: 575px;
             background: rgba(255, 255, 255, 0.1);
             border: 3px solid #FFC600;
@@ -53,8 +51,6 @@
             }
 
             h2 {
-                width: 347px;
-                height: 17px;
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 29px;
@@ -69,13 +65,68 @@
             }
 
             h3 {
-                height: 57px;
+                padding-bottom: 40px;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 22px;
                 color: #00303C;
                 opacity: 0.5;
                 margin: 0 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1360px){
+    .extractor-wrapper{
+        background: none;
+        .extractor-cards{
+            width: 100%;
+            background: url(../../assets/yellow-background-elipse.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            gap: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .extractor-wrapper{
+        margin-top: 80px;
+        gap: 40px;
+        .extractor-header{
+            h1{
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        .extractor-cards {
+            .extractor-left, .extractor-center, .extractor-right {
+                gap: 25px;
+                height: 446px;
+                img {
+                    align-self: center;
+                    width: 232px;
+                    height: 232px;
+                    margin: 20px 20px 0 20px;
+                }
+    
+                h2 {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+    
+                span {
+                    width: 243px;
+                }
+    
+                h3 {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
         }
     }

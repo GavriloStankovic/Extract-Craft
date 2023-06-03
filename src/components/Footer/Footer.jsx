@@ -41,7 +41,13 @@ const Footer = () => {
           <h1>BUY ONLINE</h1>
         </div>
       </div>
+      <div className="hidden-footer-icons">
+        <img src={facebook} alt="" width={33.8} height={33.8} />
+        <img src={instagram} alt="" width={33.8} height={33.8} />
+        <img src={tiktok} alt="" width={33.8} height={33.8} />
+      </div>
       <div className="footer-links">
+        <p>info@extractcraft.com</p>
         <h3>© 2023 ExtractCraft LLC</h3>
         <div className="links">
           <a href="#">FAQs</a>
@@ -49,6 +55,9 @@ const Footer = () => {
           <a href="#">Warranty / Returns</a>
           <a href="#">Terms & Privacy Policy</a>
         </div>
+      </div>
+      <div className="hidden-h3">
+        <h3>© 2023 ExtractCraft LLC</h3>
       </div>
       <div className="last">
         <h3>

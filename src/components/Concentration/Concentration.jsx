@@ -5,7 +5,9 @@ const Concentration = () => {
   return (
     <div className="concentration-wrapper">
       <div className="cocentration-header">
-        <h1>It's HIGH time you improved your concentration</h1>
+        <h1>
+          It's HIGH time you improved <br /> your concentration
+        </h1>
         <button>SHOP NOW</button>
       </div>
       <div className="concentration">
@@ -37,6 +39,9 @@ const Concentration = () => {
             &bull; Our closed loop ethanol extraction system recovers 95% of the
             ethanol and saves you money.
           </span>
+        </div>
+        <div className="button-hidden">
+          <button>SHOP NOW</button>
         </div>
       </div>
     </div>

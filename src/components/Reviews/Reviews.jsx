@@ -4,6 +4,7 @@ import star from "../../assets/star/star.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import data from "../../utils/slider.json";
 import "swiper/css";
+import { swiperSettings } from "../../utils/sliderSettings";
 
 const Reviews = () => {
   return (
@@ -12,7 +13,7 @@ const Reviews = () => {
         <h1>Customer Reviews</h1>
         <button>VIEW ALL</button>
       </div>
-      <Swiper spaceBetween={50} slidesPerView={3}>
+      <Swiper {...swiperSettings}>
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="reviews-card">
@@ -32,6 +33,9 @@ const Reviews = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="hidden-review-button">
+        <button>VIEW ALL</button>
+      </div>
     </div>
   );
 };

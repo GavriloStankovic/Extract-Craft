@@ -1,21 +1,19 @@
 .reviews-wrapper {
     margin-top: 180px;
     width: 100%;
-    height: 667px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 80px;
 
     .reviews-header {
-        width: 1600px;
+        width: 83.33%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         h1 {
-            width: 402px;
-            height: 49px;
             font-weight: 600;
             font-size: 40px;
             line-height: 49px;
@@ -29,8 +27,7 @@
             justify-content: center;
             align-items: center;
             padding: 30px 50px;
-            width: 224px;
-            height: 77px;
+            width: max-content;
             background: #FFFFFF;
             border: 4px solid #00303C;
             border-radius: 54px;
@@ -44,13 +41,21 @@
     .swiper-horizontal{
         overflow: hidden;
         width: 80%;
-
+          
         .swiper-wrapper {
             overflow: visible;
 
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+            }
+
             .reviews-card {
-                width: 462px;
-                height: 505px;
+                padding: 20px 0;
+                max-width: 462px;
+                width: fit-content;
+                min-height: 505px;
+                height: fit-content;
                 background: #FFFFFF;
                 border: 3px solid rgba(0, 48, 60, 0.2);
                 border-radius: 30px;
@@ -90,5 +95,71 @@
                 }
             }
         }    
-    }    
+    }   
+    .hidden-review-button {
+        display: none;
+    } 
+}
+@media screen and (max-width: 1650px) {
+    .reviews-wrapper{
+        .reviews-header{
+            h1{
+                font-size: 36px;
+            }
+            button {
+                padding: 15px 40px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .reviews-wrapper{
+        gap: 40px;
+        margin-top: 80px;
+        .reviews-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1{
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            button {
+                display: none;
+            }
+        }
+        .swiper-horizontal{
+            .swiper-wrapper{
+                .reviews-card{
+                    h1{
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+        .hidden-review-button{
+            display: block;
+
+            button {
+                padding: 20px 50px;
+                border: 4px solid #00924B;
+                border-radius: 54px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                color: #00924B;
+                width: max-content;
+                background: #FFFFFF;
+            }
+        }
+    }
 }
