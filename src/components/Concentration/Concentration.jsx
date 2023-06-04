@@ -7,6 +7,7 @@ const Concentration = () => {
       <div className="concentration-wrapper">
         <div className="cocentration-header">
           <h1>
+            It's HIGH time you improved
             <br /> your concentration
           </h1>
           <button>SHOP NOW</button>

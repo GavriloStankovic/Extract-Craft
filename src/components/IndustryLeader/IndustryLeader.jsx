@@ -1,10 +1,10 @@
 import React from "react";
 import "./IndustryLeader.scss";
-import bottles from "../../assets/bottles.svg";
+import { ReactComponent as Bottles } from "../../assets/bottles.svg";
 
 const IndustryLeader = () => {
   return (
-    <div className="industry-wrapper">
+    <div className="container industry-wrapper">
       <div className="industryLeader">
         <div className="industry-left">
           <span>The Industry Leader in Home Extraction Technology</span>
@@ -16,7 +16,7 @@ const IndustryLeader = () => {
           <button>LEARN MORE</button>
         </div>
         <div className="right-side">
-          <img src={bottles} alt="" />
+          <Bottles />
         </div>
       </div>
     </div>
