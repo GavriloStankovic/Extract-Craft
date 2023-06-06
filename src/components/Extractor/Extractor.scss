@@ -79,6 +79,12 @@
 @media screen and (max-width: 1360px){
     .extractor-wrapper{
         background: none;
+        .extractor-header{
+            h1{
+                font-size: 30px;
+                padding: 0 20px;
+            }
+        }
         .extractor-cards{
             width: 100%;
             background: url(../../assets/yellow-background-elipse.svg);
@@ -95,7 +101,7 @@
 }
 @media screen and (max-width: 460px){
     .extractor-wrapper{
-        margin-top: 80px;
+        margin-top: 60px;
         gap: 40px;
         .extractor-header{
             h1{

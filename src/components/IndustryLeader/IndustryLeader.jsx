@@ -13,7 +13,7 @@ const IndustryLeader = () => {
             and herbal concentrates from your <br />
             home grown plants and botanicals
           </h1>
-          <button>LEARN MORE</button>
+          <button className="primary">LEARN MORE</button>
         </div>
         <div className="right-side">
           <Bottles />

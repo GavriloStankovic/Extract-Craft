@@ -26,20 +26,24 @@ const Beefits = () => {
         </p>
         <h3>What can you make?</h3>
         <div className="options">
-          <p>
-            <span>-</span> Relief Creams
-          </p>
-          <p>
-            <span>-</span> Tinctures
-          </p>
-          <p>
-            <span>-</span> Magic Butter
-          </p>
-          <p>
-            <span>-</span> Edibles
-          </p>
+          <div>
+            <p>
+              <span>-</span> Relief Creams
+            </p>
+            <p>
+              <span>-</span> Tinctures
+            </p>
+          </div>
+          <div>
+            <p>
+              <span>-</span> Magic Butter
+            </p>
+            <p>
+              <span>-</span> Edibles
+            </p>
+          </div>
         </div>
-        <button>SHOP NOW</button>
+        <button className="primary">SHOP NOW</button>
       </div>
     </div>
   );

@@ -20,17 +20,7 @@
         }
 
         button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 50px;
-            width: 247px;
-            background: #ffffff;
             border: 4px solid #00924b;
-            border-radius: 54px;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
             color: #00924b;
         }
     }
@@ -74,6 +64,7 @@
         margin-top: 90px;
         .cocentration-header {
             h1 {
+                margin: 0;
                 font-size: 36px;
             }
             button {
@@ -89,6 +80,7 @@
             justify-content: center;
             align-items: center;
             h1 {
+                text-align: center;
                 font-size: 30px;
             }
             button {
@@ -105,6 +97,11 @@
             .concentration-left,
             .concentration-right {
                 width: 90%;
+
+                span{
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
 
             .button-hidden {

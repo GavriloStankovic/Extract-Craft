@@ -11,7 +11,7 @@ const Reviews = () => {
     <div className="container reviews-wrapper">
       <div className="reviews-header">
         <h1>Customer Reviews</h1>
-        <button>VIEW ALL</button>
+        <button className="primary">VIEW ALL</button>
       </div>
       <Swiper {...swiperSettings}>
         {data.map((item, index) => (
@@ -34,7 +34,7 @@ const Reviews = () => {
         ))}
       </Swiper>
       <div className="hidden-review-button">
-        <button>VIEW ALL</button>
+        <button className="primary">VIEW ALL</button>
       </div>
     </div>
   );

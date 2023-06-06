@@ -33,17 +33,8 @@
             }
 
             button {
-                padding: 30px 50px;
-                width: fit-content;
-                background: #FFFFFF;
                 border: 4px solid #00303C;
-                border-radius: 54px;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 29px;
                 color: #00303C;
-                display: flex;
-                align-items: center;
             }
         }
         .right-side {
@@ -91,7 +82,7 @@
     .industry-wrapper{ 
         padding: 0;
         background: none;
-        margin-top: 80px;
+        margin-top: 60px;
         height: auto;
         .industryLeader{
             height: auto;
@@ -171,6 +162,9 @@
                     padding: 0 20px;
                     text-align: center;
                 }
+            }
+            .right-side{
+                margin-right: 15px;
             }
         }
     }

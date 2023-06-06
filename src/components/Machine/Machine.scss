@@ -109,6 +109,13 @@
 }
 @media screen and (max-width: 1380px){
     .machine-wrapper{
+        margin-top: 60px;
+        .machine-header{
+            h1{
+                font-size: 30px;
+                padding: 0 20px;
+            }
+        }
         .machine-holder{
             >:nth-child(1){
                 display: none;
@@ -122,10 +129,11 @@
 @media screen and (max-width: 460px){
     .machine-wrapper{
         gap: 40px;
-        margin-top: 40px;
+        margin-top: 80px;
         .machine-header{
             width: 90%;
             h1{
+                padding: 0 20px;
                 margin: 0;
                 font-size: 20px;
                 line-height: 24px;

@@ -10,7 +10,7 @@ const Concentration = () => {
             It's HIGH time you improved
             <br /> your concentration
           </h1>
-          <button>SHOP NOW</button>
+          <button className="primary">SHOP NOW</button>
         </div>
         <div className="concentration">
           <div className="concentration-left">

@@ -30,6 +30,7 @@ const Questions = () => {
       </div>
       <div className="questions">
         <Accordion
+          allowZeroExpanded={true}
           className="accordion"
           allowMultipleExpanded={false}
           preExpanded={expandedItems}
