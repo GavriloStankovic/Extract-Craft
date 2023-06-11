@@ -1,5 +1,6 @@
 .industry-wrapper {
     margin-top: 107px;
+    width: 100%;
     height: auto;
     background: url(../../assets/Subtract.png);
     background-repeat: no-repeat;
@@ -84,6 +85,8 @@
         background: none;
         margin-top: 60px;
         height: auto;
+        .container{
+            padding: 0;
         .industryLeader{
             height: auto;
             display: flex;
@@ -128,6 +131,7 @@
             }
         }
     }
+}
 }
 @media screen and (max-width: 850px) {
     .industry-wrapper{

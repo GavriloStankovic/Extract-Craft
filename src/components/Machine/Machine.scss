@@ -30,6 +30,7 @@
         justify-content: center;
         align-items: center;
         background: url(../../assets/sub123.png);
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
@@ -103,7 +104,15 @@
                 border: none;
                 color: white;
                 line-height: 29px;
+                transition: transform 0.4s ease-in-out;
             }
+            button:hover{
+                transform: scale(1.1);
+                background: #FFFFFF;
+                color: #FFC600;
+                border: 3px solid #FFC600;
+            }
+            
         }
     }
 }

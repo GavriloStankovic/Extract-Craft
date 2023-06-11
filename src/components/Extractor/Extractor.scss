@@ -10,7 +10,7 @@
     background: url(../../assets/Subtract111.png);
     background-repeat: no-repeat;
     background-position: center;
-
+    background-size: cover;
     .extractor-header {
         width: auto;
         height: auto;
@@ -26,6 +26,7 @@
     }
 
     .extractor-cards {
+        margin-top: 90px;
         display: flex;
         gap: 5.20%;
         height: auto;
@@ -43,6 +44,8 @@
             border: 3px solid #FFC600;
             backdrop-filter: blur(20px);
             border-radius: 30px;
+            transition: transform 0.5s ease-in-out;
+            position: relative;
 
             img {
                 width: 347px;
@@ -74,39 +77,17 @@
                 margin: 0 20px;
             }
         }
+        .extractor-left:hover, .extractor-center:hover, .extractor-right:hover{
+            transform: translateY(-10px);
+        }
     }
 }
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1500px){
     .extractor-wrapper{
-        background: none;
         .extractor-header{
             h1{
                 font-size: 30px;
                 padding: 0 20px;
-            }
-        }
-        .extractor-cards{
-            width: 100%;
-            background: url(../../assets/yellow-background-elipse.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            gap: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}
-@media screen and (max-width: 460px){
-    .extractor-wrapper{
-        margin-top: 60px;
-        gap: 40px;
-        .extractor-header{
-            h1{
-                font-size: 20px;
-                line-height: 24px;
             }
         }
         .extractor-cards {
@@ -133,6 +114,41 @@
                     font-size: 14px;
                     line-height: 17px;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .extractor-wrapper{
+        background: url(../../assets/yellow-background-elipse.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .extractor-header{
+            background: none;
+        }
+
+        .extractor-cards{
+            width: 100%;
+            gap: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 460px){
+    .extractor-wrapper{
+        margin-top: 60px;
+        gap: 40px;
+        .extractor-header{
+            h1{
+                font-size: 20px;
+                line-height: 24px;
             }
         }
     }
