@@ -1,6 +1,5 @@
 .reviews-wrapper {
     margin-top: 180px;
-    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -8,7 +7,7 @@
     gap: 80px;
 
     .reviews-header {
-        width: 83.33%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,25 +21,14 @@
         }
 
         button {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 50px;
-            width: max-content;
-            background: #FFFFFF;
             border: 4px solid #00303C;
-            border-radius: 54px;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
             color: #00303C;
         }
     }
 
     .swiper-horizontal{
         overflow: hidden;
-        width: 80%;
+        width: 90%;
           
         .swiper-wrapper {
             overflow: visible;
@@ -104,7 +92,7 @@
     .reviews-wrapper{
         .reviews-header{
             h1{
-                font-size: 36px;
+                font-size: 34px;
             }
             button {
                 padding: 15px 40px;
@@ -114,7 +102,21 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
+    .reviews-wrapper{
+        .reviews-header{
+            h1{
+                font-size: 28px;
+            }
+            button {
+                padding: 15px 35px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
     .reviews-wrapper{
         gap: 40px;
         margin-top: 80px;

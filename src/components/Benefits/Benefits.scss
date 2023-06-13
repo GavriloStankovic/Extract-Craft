@@ -1,7 +1,5 @@
 .benefits-wrapper {
     margin-top: 180px;
-    margin-left: 8.33%;
-    margin-right: 8.33%;
     display: flex;
     align-items: center;
     gap: 5.25%;
@@ -59,16 +57,31 @@
         .options {
             display: flex;
             gap: 15px;
-            height: 14px;
-            max-width: fit-content;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+            width: max-content;
 
-            >:nth-child(1)>span, :nth-child(3)>span{
-                color: #00924B;
-            }
-
-            >:nth-child(2)>span, :nth-child(4)>span {
-                color: #FFC600;
-            }
+            >:nth-child(1){
+                display: flex;
+                gap: 15px;
+                >:nth-child(1)>span {
+                    color: #00924B;
+                }
+                :nth-child(2)>span{
+                    color: #FFC600;
+                }
+            }    
+            >:nth-child(2){
+                gap: 15px;
+                display: flex;
+                >:nth-child(1)>span {
+                    color: #00924B;
+                }
+                >:nth-child(2)>span{
+                    color: #FFC600;
+                }
+            }    
 
             p {
                 font-weight: 400;
@@ -80,18 +93,7 @@
 
         button {
             margin-top: 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 50px;
-            width: max-content;
-            background: #FFFFFF;
             border: 4px solid #00924B;
-            border-radius: 54px;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
             color: #00924B;
         }
     }
@@ -152,7 +154,7 @@
         }
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 460px){
     .benefits-wrapper{
         margin-top: 80px;
         
@@ -195,8 +197,20 @@
             }
 
             .options {
-                gap: 13px;
+                gap: 18px;
+
+                >:nth-child(1){
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+                >:nth-child(2){
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+
                 p {
+                    gap: 5px;
+                    display: flex;
                     font-size: 14px;
                     line-height: 17px;
                 }

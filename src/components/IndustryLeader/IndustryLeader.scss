@@ -1,16 +1,15 @@
 .industry-wrapper {
-    width: 100%;
     margin-top: 107px;
-    height: 638px;
+    width: 100%;
+    height: auto;
     background: url(../../assets/Subtract.png);
     background-repeat: no-repeat;
     background-size: cover;
 
     .industryLeader {
+        height: 640px;
         position: relative;
         display: flex;
-        height: 100%;
-        margin: 0 8.33%;
         gap: 148px;
     
 
@@ -35,23 +34,14 @@
             }
 
             button {
-                padding: 30px 50px;
-                width: 30.8%;
-                background: #FFFFFF;
                 border: 4px solid #00303C;
-                border-radius: 54px;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 29px;
                 color: #00303C;
-                display: flex;
-                align-items: center;
             }
         }
         .right-side {
             position: absolute;
             display: flex;
-            right: 1.33%;
+            right: -2.70%;
             top: -8%;
 
             img {
@@ -68,31 +58,37 @@
             gap: 90px;
             .industry-left{
                 span {
-                    font-size: 26px;
+                    font-size: 28px;
+                    line-height: 30px;
                 }
     
                 h1 {
                     font-size: 36px;
+                    line-height: 50px;
                 }
     
                 button {
                     padding: 15px 40px;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
             .right-side{
-                right: -1%;
+                right: -2.70%;
                 top: -20%;
             }
         }
     }    
 }   
-@media screen and (max-width: 1380px){
+@media screen and (max-width: 1560px){
     .industry-wrapper{ 
+        padding: 0;
         background: none;
-        margin-top: 30px;
+        margin-top: 60px;
         height: auto;
+        .container{
+            padding: 0;
         .industryLeader{
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -127,44 +123,54 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                >:nth-child(1){
+                    width: 65%;
+                    height: auto;
+                }
             }
         }
     }
 }
-@media screen and (max-width: 1380px) {
+}
+@media screen and (max-width: 850px) {
     .industry-wrapper{
-        margin: 0;
         .industryLeader{
             .industry-left{
                 span{
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 20px;
-                    text-align: center;
+                    font-size: 22px;
+                    line-height: 26px;
                 }
-                h1 {
-                    font-weight: 700;
+                h1{
                     font-size: 24px;
-                    line-height: 29px;
-                    max-width: 340px;
-                    color: #00303C;
-                    text-align: center;
+                    line-height: 36px;
                 }
                 button {
-                    width: auto;
-                    padding: 20px 30px;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 20px;
-                }
-            }
-            .right-side{
-                width: 70%;
-                margin-right: 30px;
-                img {
-                    object-fit: cover;
+                    font-size: 14px;
                 }
             }
         }
     }
 }
+@media screen and (max-width: 650px){
+    .industry-wrapper{
+        .industryLeader{
+            .industry-left{
+                span{
+                    font-size: 20px;
+                    padding: 0 20px;
+                    text-align: center;
+                }
+                h1{font-size: 20px;
+                    line-height: 30px;
+                    padding: 0 20px;
+                    text-align: center;
+                }
+            }
+            .right-side{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+    

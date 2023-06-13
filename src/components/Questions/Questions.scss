@@ -68,7 +68,20 @@
         }
     }
 }
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 650px) {
+    .questions-wrapper{
+        .questions-header{
+            h1{
+                text-align: center;
+                font-size: 32px;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
     .questions-wrapper{
         margin-top: 80px;
         .questions-header{

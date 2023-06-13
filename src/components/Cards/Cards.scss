@@ -8,6 +8,7 @@
     background-image: url(../../assets/Subtract3.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 
     .cards {
         height: auto;
@@ -28,6 +29,8 @@
             border-radius: 30px;
             width: min-content;
             background: white;
+            transition: transform 0.5s ease-in-out;
+            position: relative;
 
             img {
                 margin: 20px 20px 0 20px;
@@ -62,25 +65,61 @@
                 opacity: 0.5;
             }
         }
-    }    
+        .left-card:hover, .center-card:hover, .right-card:hover {
+            transform: translateY(-10px);
+        }
+    }  
 }
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1500px){
+    .cards-wrapper{
+        .cards{
+            gap: 50px;
+
+            .left-card, .center-card, .right-card {
+                img {
+                    margin: 20px 20px 0 20px;
+                    width: 232px;
+                    height: 222px;
+                    object-fit: contain;
+                }
+    
+                h3 {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+    
+                span {
+                    border: 1px solid #00303C;
+                    width: 243px;
+                }
+    
+                h4 {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
     .cards-wrapper{
         background: url(../../assets/green-background-elipse.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        margin-top: 60px;
+        margin-top: 90px;
         .cards{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 60px;
+            gap: 50px;
         }
     }
-}
-@media screen and (max-width: 400px) {
+}    
+
+@media screen and (max-width: 460px) {
     .cards-wrapper {
         .cards {
             .left-card, .center-card, .right-card {
