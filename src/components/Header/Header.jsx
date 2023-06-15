@@ -33,30 +33,40 @@ const Header = () => {
           <Cart />
           <HamburgerMenu onClick={toggleMenu} />
         </div>
-        {isOpen && (
-          <div className={`dropdown-menu open slide-in`}>
-            <div className={`menu-overlay open slide-in`} />
-            <div className="dropdown-menu-header">
-              <Logo />
-              <button onClick={toggleMenu}>X</button>
-            </div>
-            <div className="mobile-menu-text">
-              <ul>
-                <li>MAKING YOUR OWN</li>
-                <li>SHOP</li>
-                <li>RESOURCES</li>
-                <li>CONTACT</li>
-                <li>SUPPORT</li>
-                <li>PRODUCTS</li>
-              </ul>
-            </div>
-            <div className="social-icons">
-              <Instagram />
-              <Facebook />
-              <Tiktok />
-            </div>
+        <div className={`dropdown-menu ${isOpen ? "open" : ""}`}>
+          {/* <div className={`menu-overlay open slide-in`} /> */}
+          <div className="dropdown-menu-header">
+            <Logo />
+            <button onClick={toggleMenu}>X</button>
           </div>
-        )}
+          <div className="mobile-menu-text">
+            <ul>
+              <li>
+                <a href="">MAKING YOUR OWN</a>
+              </li>
+              <li>
+                <a href="">SHOP</a>
+              </li>
+              <li>
+                <a href="">RESOURCES</a>
+              </li>
+              <li>
+                <a href="">CONTACT</a>
+              </li>
+              <li>
+                <a href="">SUPPORT</a>
+              </li>
+              <li>
+                <a href="">PRODUCTS</a>
+              </li>
+            </ul>
+          </div>
+          <div className="social-icons">
+            <Instagram />
+            <Facebook />
+            <Tiktok />
+          </div>
+        </div>
       </div>
     </div>
   );
