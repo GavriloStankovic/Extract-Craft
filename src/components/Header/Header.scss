@@ -71,10 +71,6 @@
             border: 2px solid #FFC600;
         }
     }
-
-    .responsive-header {
-        display: none;
-    }
     .dropdown-menu {
         position: fixed;
         right: -100%;
@@ -161,11 +157,14 @@
             >:nth-child(3){
                 width: min-content;
             }
+            >:nth-child(3):hover{
+                cursor: pointer;
+            }
         }
         .dropdown-menu {
             position: fixed;
             top: 0;
-            right: -100%;
+            right: 0;
             width: -webkit-fill-available;
             height: 100%;
             background-color: #ffffff;
