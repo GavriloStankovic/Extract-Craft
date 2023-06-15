@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import "./Header.scss";
 import { ReactComponent as Instagram } from "../../assets/instagram/instagram.svg";
 import { ReactComponent as Facebook } from "../../assets/facebook/facebook.svg";

@@ -75,8 +75,9 @@
     .responsive-header {
         display: none;
     }
-    .nav-menu-mobile {
-        display: none;
+    .dropdown-menu {
+        position: fixed;
+        right: -100%;
     }
 }
 
@@ -296,10 +297,6 @@
             .social-icons {
                 gap: 15px;
             }
-        }
-
-        .dropdown-menu.open {
-            right: 0; 
         }
     }
 }
