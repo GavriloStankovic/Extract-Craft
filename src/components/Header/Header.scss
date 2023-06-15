@@ -71,9 +71,11 @@
             border: 2px solid #FFC600;
         }
     }
+    .responsive-header {
+        display: none;
+    }
     .dropdown-menu {
-        position: fixed;
-        right: -100%;
+        display: none;
     }
 }
 
