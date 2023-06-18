@@ -16,7 +16,9 @@ const IndustryLeader = () => {
               home grown plants and botanicals
             </h1>
             <Slide bottom>
-              <button className="primary">LEARN MORE</button>
+              <div>
+                <button className="primary">LEARN MORE</button>
+              </div>
             </Slide>
           </div>
           <Slide bottom>

@@ -14,7 +14,9 @@ const Concentration = () => {
             </h1>
           </Flip>
           <Flip left>
-            <button className="primary">SHOP NOW</button>
+            <div>
+              <button className="primary">SHOP NOW</button>
+            </div>
           </Flip>
         </div>
         <div className="concentration">
