@@ -1,16 +1,21 @@
 import React from "react";
 import "./Concentration.scss";
+import Flip from "react-reveal/Flip";
 
 const Concentration = () => {
   return (
     <div className="container">
       <div className="concentration-wrapper">
         <div className="cocentration-header">
-          <h1>
-            It's HIGH time you improved
-            <br /> your concentration
-          </h1>
-          <button className="primary">SHOP NOW</button>
+          <Flip left>
+            <h1>
+              It's HIGH time you improved
+              <br /> your concentration
+            </h1>
+          </Flip>
+          <Flip left>
+            <button className="primary">SHOP NOW</button>
+          </Flip>
         </div>
         <div className="concentration">
           <div className="concentration-left">

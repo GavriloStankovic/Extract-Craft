@@ -1,6 +1,7 @@
 import React from "react";
 import "./IndustryLeader.scss";
 import { ReactComponent as Bottles } from "../../assets/bottles.svg";
+import Slide from "react-reveal/Slide";
 
 const IndustryLeader = () => {
   return (
@@ -14,11 +15,15 @@ const IndustryLeader = () => {
               and herbal concentrates from your <br />
               home grown plants and botanicals
             </h1>
-            <button className="primary">LEARN MORE</button>
+            <Slide bottom>
+              <button className="primary">LEARN MORE</button>
+            </Slide>
           </div>
-          <div className="right-side">
-            <Bottles />
-          </div>
+          <Slide bottom>
+            <div className="right-side">
+              <Bottles />
+            </div>
+          </Slide>
         </div>
       </div>
     </div>

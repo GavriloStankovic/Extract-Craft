@@ -7,6 +7,7 @@ import { ReactComponent as Cart } from "../../assets/cart/cart.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/profile-icon.svg";
 import { ReactComponent as HamburgerMenu } from "../../assets/hamburger-menu.svg";
 import { useState } from "react";
+import Fade from "react-reveal/Fade";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,22 +17,28 @@ const Header = () => {
   return (
     <div className="container">
       <div className="header">
-        <Logo />
-        <div className="nav-menu">
-          <ul>
-            <li>MAKING YOUR OWN</li>
-            <li>SHOP</li>
-            <li>RESOURCES</li>
-            <li>CONTACT</li>
-          </ul>
-          <button className="nav-button">MY ACCOUNT</button>
-          <Cart />
-        </div>
-        <div className="responsive-header">
-          <ProfileIcon />
-          <Cart />
-          <HamburgerMenu onClick={toggleMenu} />
-        </div>
+        <Fade left>
+          <Logo />
+        </Fade>
+        <Fade right>
+          <div className="nav-menu">
+            <ul>
+              <li>MAKING YOUR OWN</li>
+              <li>SHOP</li>
+              <li>RESOURCES</li>
+              <li>CONTACT</li>
+            </ul>
+            <button className="nav-button">MY ACCOUNT</button>
+            <Cart />
+          </div>
+        </Fade>
+        <Fade right>
+          <div className="responsive-header">
+            <ProfileIcon />
+            <Cart />
+            <HamburgerMenu onClick={toggleMenu} />
+          </div>
+        </Fade>
         <div className={`dropdown-menu ${isOpen ? "open" : ""}`}>
           {/* <div className={`menu-overlay open slide-in`} /> */}
           <div className="dropdown-menu-header">
