@@ -17,28 +17,44 @@ const Header = () => {
   return (
     <div className="container">
       <div className="header">
-        <Fade left>
+        <Fade top>
           <Logo />
         </Fade>
-        <Fade right>
-          <div className="nav-menu">
-            <ul>
+        <div className="nav-menu">
+          <ul>
+            <Fade top delay={300}>
               <li>MAKING YOUR OWN</li>
+            </Fade>
+            <Fade top delay={600}>
               <li>SHOP</li>
+            </Fade>
+            <Fade top delay={900}>
               <li>RESOURCES</li>
+            </Fade>
+            <Fade top delay={1200}>
               <li>CONTACT</li>
-            </ul>
-            <button className="nav-button">MY ACCOUNT</button>
+            </Fade>
+          </ul>
+          <Fade top delay={1500}>
+            <div>
+              <button className="nav-button">MY ACCOUNT</button>
+            </div>
+          </Fade>
+          <Fade top delay={1800}>
             <Cart />
-          </div>
-        </Fade>
-        <Fade right>
-          <div className="responsive-header">
+          </Fade>
+        </div>
+        <div className="responsive-header">
+          <Fade top delay={600}>
             <ProfileIcon />
+          </Fade>
+          <Fade top delay={900}>
             <Cart />
+          </Fade>
+          <Fade top delay={1200}>
             <HamburgerMenu onClick={toggleMenu} />
-          </div>
-        </Fade>
+          </Fade>
+        </div>
         <div className={`dropdown-menu ${isOpen ? "open" : ""}`}>
           {/* <div className={`menu-overlay open slide-in`} /> */}
           <div className="dropdown-menu-header">

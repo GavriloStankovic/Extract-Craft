@@ -13,10 +13,10 @@ const Machine = () => {
         <h1>Home Kitchen or Small Business? We got you</h1>
       </div>
       <div className="machine-holder">
-        <Fade left>
+        <Fade left duration={1600}>
           <img src={bottleLeft} alt="" />
         </Fade>
-        <Fade right>
+        <Fade right duration={1600}>
           <img src={rightBottle} alt="" />
         </Fade>
         <div className="machine-card">

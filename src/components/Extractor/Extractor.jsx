@@ -13,7 +13,7 @@ const Extractor = () => {
           <h1>The #1 Rated Botanical Extractor</h1>
         </div>
         <div className="extractor-cards">
-          <Slide left>
+          <Slide left duration={800}>
             <div className="extractor-left">
               <img src={sugar} alt="" />
               <h2>Master Baker - With a Twist</h2>
@@ -24,7 +24,7 @@ const Extractor = () => {
               </h3>
             </div>
           </Slide>
-          <Slide left delay={300}>
+          <Slide left duration={1000}>
             <div className="extractor-center">
               <img src={bears} alt="" />
               <h2>Edibles Made Easy</h2>
@@ -35,7 +35,7 @@ const Extractor = () => {
               </h3>
             </div>
           </Slide>
-          <Slide left delay={600}>
+          <Slide left duration={1200}>
             <div className="extractor-right">
               <img src={honey} alt="" />
               <h2>Shattering Expectations</h2>

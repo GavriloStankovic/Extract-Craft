@@ -99,8 +99,10 @@
             }
 
             >:nth-child(3) {
-                width: 80px;
-                height: 60px;
+                >:nth-child(1){
+                    width: 80px;
+                    height: 60px;
+                }
             }
 
             .nav-button {
@@ -145,14 +147,20 @@
             align-items: center;
 
             >:nth-child(1){
-                width: min-content;
+                >:nth-child(1){
+                    width: min-content;
+                }
             }
             >:nth-child(2){
-                width: 60px;
-                height: auto;
+                >:nth-child(1){
+                    width: 60px;
+                    height: auto;
+                }
             }
             >:nth-child(3){
-                width: min-content;
+                >:nth-child(1){
+                    width: min-content;
+                }
             }
             >:nth-child(3):hover{
                 cursor: pointer;
@@ -264,15 +272,16 @@
             gap: 18px;
             justify-content: center;
             align-items: center;
-    
-            >:nth-child(1){
-                width: min-content;
-            }
+            
             >:nth-child(2){
-                width: 50px;
+                >:nth-child(1){
+                    width: 50px;
+                }
             }
             >:nth-child(3){
-                width: 34px;
+                >:nth-child(1){
+                    width: 32px;
+                }
             }
         }
         .dropdown-menu {                

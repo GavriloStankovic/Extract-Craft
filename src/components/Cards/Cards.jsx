@@ -3,14 +3,14 @@ import "./Cards.scss";
 import white from "../../assets/white-honey.svg";
 import yellow from "../../assets/yellow-honey.svg";
 import blue from "../../assets/blue-honey.svg";
-import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 
 const Cards = () => {
   return (
     <div className="cards-wrapper">
       <div className="container">
         <div className="cards">
-          <Slide left>
+          <Fade bottom duration={1000}>
             <div className="left-card">
               <img src={white} alt="" />
               <h3>
@@ -23,8 +23,8 @@ const Cards = () => {
                 is the premier home extraction equipment on the market today.
               </h4>
             </div>
-          </Slide>
-          <Slide bottom>
+          </Fade>
+          <Fade bottom duration={1000} delay={1000}>
             <div className="center-card">
               <img src={yellow} alt="" />
               <h3>
@@ -38,8 +38,8 @@ const Cards = () => {
                 Simple Oil.
               </h4>
             </div>
-          </Slide>
-          <Slide right>
+          </Fade>
+          <Fade bottom duration={1000} delay={2000}>
             <div className="right-card">
               <img src={blue} alt="" />
               <h3>
@@ -52,7 +52,7 @@ const Cards = () => {
                 health advocates improving our own health and wellness.
               </h4>
             </div>
-          </Slide>
+          </Fade>
         </div>
       </div>
     </div>
