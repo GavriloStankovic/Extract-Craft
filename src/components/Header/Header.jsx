@@ -7,6 +7,7 @@ import { ReactComponent as Cart } from "../../assets/cart/cart.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/profile-icon.svg";
 import { ReactComponent as HamburgerMenu } from "../../assets/hamburger-menu.svg";
 import { useState } from "react";
+import Fade from "react-reveal/Fade";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,21 +17,43 @@ const Header = () => {
   return (
     <div className="container">
       <div className="header">
-        <Logo />
+        <Fade top>
+          <Logo />
+        </Fade>
         <div className="nav-menu">
           <ul>
-            <li>MAKING YOUR OWN</li>
-            <li>SHOP</li>
-            <li>RESOURCES</li>
-            <li>CONTACT</li>
+            <Fade top delay={300}>
+              <li>MAKING YOUR OWN</li>
+            </Fade>
+            <Fade top delay={600}>
+              <li>SHOP</li>
+            </Fade>
+            <Fade top delay={900}>
+              <li>RESOURCES</li>
+            </Fade>
+            <Fade top delay={1200}>
+              <li>CONTACT</li>
+            </Fade>
           </ul>
-          <button className="nav-button">MY ACCOUNT</button>
-          <Cart />
+          <Fade top delay={1500}>
+            <div>
+              <button className="nav-button">MY ACCOUNT</button>
+            </div>
+          </Fade>
+          <Fade top delay={1800}>
+            <Cart />
+          </Fade>
         </div>
         <div className="responsive-header">
-          <ProfileIcon />
-          <Cart />
-          <HamburgerMenu onClick={toggleMenu} />
+          <Fade top delay={600}>
+            <ProfileIcon />
+          </Fade>
+          <Fade top delay={900}>
+            <Cart />
+          </Fade>
+          <Fade top delay={1200}>
+            <HamburgerMenu onClick={toggleMenu} />
+          </Fade>
         </div>
         <div className={`dropdown-menu ${isOpen ? "open" : ""}`}>
           {/* <div className={`menu-overlay open slide-in`} /> */}
