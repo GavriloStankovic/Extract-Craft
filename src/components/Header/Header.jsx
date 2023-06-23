@@ -64,22 +64,22 @@ const Header = () => {
           <div className="mobile-menu-text">
             <ul>
               <li>
-                <a href="">MAKING YOUR OWN</a>
+                <a href="#">MAKING YOUR OWN</a>
               </li>
               <li>
-                <a href="">SHOP</a>
+                <a href="#">SHOP</a>
               </li>
               <li>
-                <a href="">RESOURCES</a>
+                <a href="#">RESOURCES</a>
               </li>
               <li>
-                <a href="">CONTACT</a>
+                <a href="#">CONTACT</a>
               </li>
               <li>
-                <a href="">SUPPORT</a>
+                <a href="#">SUPPORT</a>
               </li>
               <li>
-                <a href="">PRODUCTS</a>
+                <a href="#">PRODUCTS</a>
               </li>
             </ul>
           </div>
