@@ -8,20 +8,20 @@ const Concentration = () => {
     <div className="container">
       <div className="concentration-wrapper">
         <div className="cocentration-header">
-          <Flip left duration={2500}>
+          <Flip left duration={2000}>
             <h1>
               It's HIGH time you improved
               <br /> your concentration
             </h1>
           </Flip>
-          <Flip left duration={2500}>
+          <Flip left duration={2000}>
             <div>
               <button className="primary">SHOP NOW</button>
             </div>
           </Flip>
         </div>
         <div className="concentration">
-          <Fade left duration={2000} delay={1000}>
+          <Fade left duration={2000} delay={800}>
             <div className="concentration-left">
               <span>
                 &bull; Create your own high quality plant, botanical, or herbal
@@ -38,7 +38,7 @@ const Concentration = () => {
               </span>
             </div>
           </Fade>
-          <Fade right duration={2000} delay={1000}>
+          <Fade right duration={2000} delay={800}>
             <div className="concentration-right">
               <span>
                 &bull; Preserve all the natural goodness from your herbs

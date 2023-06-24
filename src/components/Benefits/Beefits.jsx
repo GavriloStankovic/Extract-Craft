@@ -15,10 +15,10 @@ const Beefits = () => {
         <img src={benefits} alt="" />
       </div>
       <div className="benefits-text">
-        <Flip top delay={300}>
+        <Flip top delay={200}>
           <h1>Health Benefits</h1>
         </Flip>
-        <Flip top delay={900}>
+        <Flip top delay={600}>
           <p>
             Essential oils and botanical extract have been shown to help boost
             immunity, anti-virals, antibacterials, antiseptics and anti-fungals.
@@ -31,10 +31,10 @@ const Beefits = () => {
             <br /> Assist with relaxation, sleep, comfort and pleasure.
           </p>
         </Flip>
-        <Flip top delay={1500}>
+        <Flip top delay={1000}>
           <h3>What can you make?</h3>
         </Flip>
-        <Flip top delay={2100}>
+        <Flip top delay={1800}>
           <div className="options">
             <div>
               <p>
@@ -54,7 +54,7 @@ const Beefits = () => {
             </div>
           </div>
         </Flip>
-        <Flip top delay={2700}>
+        <Flip top delay={2400}>
           <div>
             <button className="primary">SHOP NOW</button>
           </div>

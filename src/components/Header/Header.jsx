@@ -22,36 +22,36 @@ const Header = () => {
         </Fade>
         <div className="nav-menu">
           <ul>
-            <Fade top delay={300}>
+            <Fade top delay={200}>
               <li>MAKING YOUR OWN</li>
             </Fade>
-            <Fade top delay={600}>
+            <Fade top delay={400}>
               <li>SHOP</li>
             </Fade>
-            <Fade top delay={900}>
+            <Fade top delay={600}>
               <li>RESOURCES</li>
             </Fade>
-            <Fade top delay={1200}>
+            <Fade top delay={800}>
               <li>CONTACT</li>
             </Fade>
           </ul>
-          <Fade top delay={1500}>
+          <Fade top delay={1000}>
             <div>
               <button className="nav-button">MY ACCOUNT</button>
             </div>
           </Fade>
-          <Fade top delay={1800}>
+          <Fade top delay={1200}>
             <Cart />
           </Fade>
         </div>
         <div className="responsive-header">
-          <Fade top delay={600}>
+          <Fade top delay={200}>
             <ProfileIcon />
           </Fade>
-          <Fade top delay={900}>
+          <Fade top delay={400}>
             <Cart />
           </Fade>
-          <Fade top delay={1200}>
+          <Fade top delay={600}>
             <HamburgerMenu onClick={toggleMenu} />
           </Fade>
         </div>

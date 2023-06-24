@@ -24,7 +24,7 @@ const Cards = () => {
               </h4>
             </div>
           </Fade>
-          <Fade bottom duration={1000} delay={1000}>
+          <Fade bottom duration={1000} delay={500}>
             <div className="center-card">
               <img src={yellow} alt="" />
               <h3>
@@ -39,7 +39,7 @@ const Cards = () => {
               </h4>
             </div>
           </Fade>
-          <Fade bottom duration={1000} delay={2000}>
+          <Fade bottom duration={1000} delay={1000}>
             <div className="right-card">
               <img src={blue} alt="" />
               <h3>
