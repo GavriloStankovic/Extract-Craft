@@ -50,10 +50,14 @@ const Footer = () => {
         <p>info@extractcraft.com</p>
         <h3>© 2023 ExtractCraft LLC</h3>
         <div className="links">
-          <a href="#">FAQs</a>
-          <a href="#">Careers</a>
-          <a href="#">Warranty / Returns</a>
-          <a href="#">Terms & Privacy Policy</a>
+          <a href="/extract-craft/src/components/Footer/Footer.jsx">FAQs</a>
+          <a href="/extract-craft/src/components/Footer/Footer.jsx">Careers</a>
+          <a href="/extract-craft/src/components/Footer/Footer.jsx">
+            Warranty / Returns
+          </a>
+          <a href="/extract-craft/src/components/Footer/Footer.jsx">
+            Terms & Privacy Policy
+          </a>
         </div>
       </div>
       <div className="hidden-h3">

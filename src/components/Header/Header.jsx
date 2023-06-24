@@ -64,22 +64,34 @@ const Header = () => {
           <div className="mobile-menu-text">
             <ul>
               <li>
-                <a href="#">MAKING YOUR OWN</a>
+                <a href="/extract-craft/src/components/Header/Header.jsx">
+                  MAKING YOUR OWN
+                </a>
               </li>
               <li>
-                <a href="#">SHOP</a>
+                <a href="/extract-craft/src/components/Header/Header.jsx">
+                  SHOP
+                </a>
               </li>
               <li>
-                <a href="#">RESOURCES</a>
+                <a href="/extract-craft/src/components/Header/Header.jsx">
+                  RESOURCES
+                </a>
               </li>
               <li>
-                <a href="#">CONTACT</a>
+                <a href="/extract-craft/src/components/Header/Header.jsx">
+                  CONTACT
+                </a>
               </li>
               <li>
-                <a href="#">SUPPORT</a>
+                <a href="/extract-craft/src/components/Header/Header.jsx">
+                  SUPPORT
+                </a>
               </li>
               <li>
-                <a href="#">PRODUCTS</a>
+                <a href="/extract-craft/src/components/Header/Header.jsx">
+                  PRODUCTS
+                </a>
               </li>
             </ul>
           </div>
