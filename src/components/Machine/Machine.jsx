@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/context";
 import "./Machine.scss";
 import bottleLeft from "../../assets/leftBottle.svg";
 import rightBottle from "../../assets/rightBottle.svg";
@@ -6,43 +7,14 @@ import dashed from "../../assets/dashed.svg";
 import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
 import machineArray from "../../utils/machineSlider";
+import { useNavigate } from "react-router";
 
 const Machine = () => {
-  const [cartItems, setCartItems] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [showCart, setShowCart] = useState(false);
-
-  const addToCart = (index) => {
-    const item = machineArray[index];
-    const existingItem = cartItems.find((cartItem) => cartItem.index === index);
-
-    if (existingItem) {
-      const updatedCartItems = cartItems.map((cartItem) =>
-        cartItem.index === index
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
-          : cartItem
-      );
-      setCartItems(updatedCartItems);
-    } else {
-      setCartItems([...cartItems, { ...item, index, quantity: 1, id: index }]);
-    }
-
-    const newTotalPrice = totalPrice + item.price;
-    setTotalPrice(newTotalPrice);
-
-    setShowCart(true);
-  };
-
-  const removeFromCart = (id, price, quantity) => {
-    const updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
-    setCartItems(updatedCartItems);
-
-    const newTotalPrice = totalPrice - price * quantity;
-    setTotalPrice(newTotalPrice);
-
-    if (updatedCartItems.length === 0) {
-      setShowCart(false);
-    }
+  const { showCart, cartItems, totalPrice, addToCart, resetCart } =
+    useContext(CartContext);
+  const navigate = useNavigate();
+  const goToCheckoutHandler = () => {
+    navigate("/checkout");
   };
 
   return (
@@ -93,14 +65,19 @@ const Machine = () => {
               </div>
               <button
                 onClick={() =>
-                  removeFromCart(cartItem.id, cartItem.price, cartItem.quantity)
+                  resetCart(cartItem.id, cartItem.price, cartItem.quantity)
                 }
               >
                 X
               </button>
             </div>
           ))}
-          <p className="total-price">Total Price: ${totalPrice}</p>
+          <div className="cart-options">
+            <p className="total-price">Total Price: ${totalPrice}</p>
+            <button onClick={goToCheckoutHandler} className="checkout-button">
+              CHECKOUT
+            </button>
+          </div>
         </div>
       )}
     </div>
