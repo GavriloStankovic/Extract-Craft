@@ -1,4 +1,4 @@
-import machineArray from "../utils/machineSlider";
+import machineArray from "../../utils/machineSlider";
 import React, { createContext, useState } from "react";
 
 const CartContext = createContext();
@@ -25,32 +25,25 @@ const CartProvider = ({ children }) => {
 
     const newTotalPrice = totalPrice + item.price;
     setTotalPrice(newTotalPrice);
-
-    setShowCart(true);
   };
 
-  const removeFromCart = (id, price, quantity) => {
-    let updatedCartItems;
-    if (quantity === 1) {
-      updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
-      setCartItems(updatedCartItems);
-    } else {
-      updatedCartItems = cartItems.map((cartItem) =>
+  const removeFromCart = (id) => {
+    const item = cartItems.find((cartItem) => cartItem.id === id);
+
+    if (item && item.quantity > 0) {
+      const updatedCartItems = cartItems.map((cartItem) =>
         cartItem.id === id
           ? { ...cartItem, quantity: cartItem.quantity - 1 }
           : cartItem
       );
+
+      const newTotalPrice = updatedCartItems.reduce(
+        (total, cartItem) => total + cartItem.price * cartItem.quantity,
+        0
+      );
+
       setCartItems(updatedCartItems);
-    }
-
-    const newTotalPrice = updatedCartItems.reduce(
-      (total, cartItem) => total + cartItem.price * cartItem.quantity,
-      0
-    );
-    setTotalPrice(newTotalPrice);
-
-    if (updatedCartItems.length === 0) {
-      setShowCart(false);
+      setTotalPrice(newTotalPrice);
     }
   };
 
@@ -73,6 +66,7 @@ const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         showCart,
+        setShowCart,
         cartItems,
         totalPrice,
         addToCart,

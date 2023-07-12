@@ -1,13 +1,27 @@
-import React, { useContext } from "react";
-import { CartContext } from "../../context/context";
+import React, { useContext, useEffect } from "react";
+import { CartContext } from "../../context/CartContext/CartContext";
 import "./Checkout.scss";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import { AiTwotoneDelete } from "react-icons/ai";
 
 const Checkout = () => {
-  const { cartItems, totalPrice, removeFromCart, addToCart, resetCart } =
-    useContext(CartContext);
+  const {
+    cartItems,
+    totalPrice,
+    removeFromCart,
+    addToCart,
+    resetCart,
+    setShowCart,
+  } = useContext(CartContext);
+
+  useEffect(() => {
+    setShowCart(false);
+
+    return () => {
+      setShowCart(true);
+    };
+  }, [setShowCart]);
 
   return (
     <div className="checkout-wrapper">

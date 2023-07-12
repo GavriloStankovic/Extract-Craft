@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CartContext } from "../../context/context";
+import { CartContext } from "../../context/CartContext/CartContext";
 import "./Machine.scss";
 import bottleLeft from "../../assets/leftBottle.svg";
 import rightBottle from "../../assets/rightBottle.svg";
@@ -7,15 +7,9 @@ import dashed from "../../assets/dashed.svg";
 import Fade from "react-reveal/Fade";
 import { Swiper, SwiperSlide } from "swiper/react";
 import machineArray from "../../utils/machineSlider";
-import { useNavigate } from "react-router";
 
 const Machine = () => {
-  const { showCart, cartItems, totalPrice, addToCart, resetCart } =
-    useContext(CartContext);
-  const navigate = useNavigate();
-  const goToCheckoutHandler = () => {
-    navigate("/checkout");
-  };
+  const { addToCart } = useContext(CartContext);
 
   return (
     <div className="machine-wrapper">
@@ -52,34 +46,6 @@ const Machine = () => {
           ))}
         </Swiper>
       </div>
-      {showCart && (
-        <div className="cart-wrapper">
-          <h2>Shopping Cart</h2>
-          {cartItems.map((cartItem) => (
-            <div key={cartItem.index} className="cart-item">
-              <img src={cartItem.image} alt={cartItem.p1} />
-              <div>
-                <p>{cartItem.p1}</p>
-                <p>Quantity: {cartItem.quantity}</p>
-                <p>Price: {cartItem.price}</p>
-              </div>
-              <button
-                onClick={() =>
-                  resetCart(cartItem.id, cartItem.price, cartItem.quantity)
-                }
-              >
-                X
-              </button>
-            </div>
-          ))}
-          <div className="cart-options">
-            <p className="total-price">Total Price: ${totalPrice}</p>
-            <button onClick={goToCheckoutHandler} className="checkout-button">
-              CHECKOUT
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
