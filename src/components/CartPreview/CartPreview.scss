@@ -1,12 +1,12 @@
 .cart-wrapper {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    right: 0;
-    top: 20px;
+    right: 20px;
+    top: 100px;
     width: 400px;
-    max-height: 300px;
+    max-height: 600px;
     z-index: 3;
     background: rgba(255, 255, 255, 0.48);
     border-radius: 16px;
@@ -17,6 +17,7 @@
     overflow: auto;
 
     h2 {
+        color: #00303C;
         text-align: center;
         margin: 0;
         padding: 10px;
@@ -43,6 +44,7 @@
             p {
                 margin: 0;
                 font-size: 15px;
+                color: #00303C;
             }
         }
 
@@ -60,11 +62,12 @@
         justify-content: space-around;
         align-items: center;
         gap: 30px;
-        padding-bottom: 15px;
+        padding: 15px 0;
 
         .total-price {
             font-size: 20px;
             font-weight: 600;
+            color: #00303C;
         }
 
         button {
@@ -80,6 +83,7 @@
             font-size: 14px;
             line-height: 29px;
             transition: transform 0.4s ease-in-out;
+            border: 1px solid #00303C;
         }
 
         button:hover {

@@ -30,7 +30,7 @@ const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     const item = cartItems.find((cartItem) => cartItem.id === id);
 
-    if (item && item.quantity > 0) {
+    if (item && item.quantity > 1) {
       const updatedCartItems = cartItems.map((cartItem) =>
         cartItem.id === id
           ? { ...cartItem, quantity: cartItem.quantity - 1 }
