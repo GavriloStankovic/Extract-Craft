@@ -8,11 +8,18 @@ import { ReactComponent as ProfileIcon } from "../../assets/profile-icon.svg";
 import { ReactComponent as HamburgerMenu } from "../../assets/hamburger-menu.svg";
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext/CartContext";
+import CartPreview from "../CartPreview/CartPreview";
 
 const Header = () => {
+  const { showCart, setShowCart } = useContext(CartContext);
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+  const toggleCart = () => {
+    setShowCart(!showCart);
   };
   return (
     <div className="container">
@@ -41,7 +48,7 @@ const Header = () => {
             </div>
           </Fade>
           <Fade top delay={1200}>
-            <Cart />
+            <Cart onClick={toggleCart} />
           </Fade>
         </div>
         <div className="responsive-header">
@@ -49,7 +56,7 @@ const Header = () => {
             <ProfileIcon />
           </Fade>
           <Fade top delay={400}>
-            <Cart />
+            <Cart onClick={toggleCart} />
           </Fade>
           <Fade top delay={600}>
             <HamburgerMenu onClick={toggleMenu} />
@@ -102,6 +109,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {showCart && <CartPreview />}
     </div>
   );
 };

@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext/CartContext";
 import "./Machine.scss";
 import bottleLeft from "../../assets/leftBottle.svg";
 import rightBottle from "../../assets/rightBottle.svg";
-import machine from "../../assets/machine.svg";
 import dashed from "../../assets/dashed.svg";
 import Fade from "react-reveal/Fade";
+import { Swiper, SwiperSlide } from "swiper/react";
+import machineArray from "../../utils/machineSlider";
 
 const Machine = () => {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div className="machine-wrapper">
       <div className="machine-header">
@@ -19,22 +23,28 @@ const Machine = () => {
         <Fade right duration={1600}>
           <img src={rightBottle} alt="" />
         </Fade>
-        <div className="machine-card">
-          <img src={machine} alt="" />
-          <img src={dashed} alt="" />
-          <p>&bull; Home Solutions</p>
-          <p>
-            &bull; Create your own pure oils at home
-            <br />
-          </p>
-          <p>
-            &bull; Safest & Lowest Cost home extraction
-            <br />
-          </p>
-          <p>&bull; Essential Oils, Full Spectrum Oils in your home kitchen</p>
-          <h1>$799.00</h1>
-          <button>SHOP NOW</button>
-        </div>
+        <Swiper>
+          {machineArray.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="machine-card">
+                <img src={item.image} alt="" />
+                <img src={dashed} alt="" />
+                <p>&bull; {item.p1}</p>
+                <p>
+                  &bull; {item.p2}
+                  <br />
+                </p>
+                <p>
+                  &bull; {item.p3}
+                  <br />
+                </p>
+                <p>&bull; {item.p4}</p>
+                <h1>${item.price}</h1>
+                <button onClick={() => addToCart(index)}>BUY NOW</button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

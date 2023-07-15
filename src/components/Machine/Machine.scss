@@ -22,9 +22,14 @@
         }
     }
 
+    .swiper-slide-active {
+        display: flex;
+        justify-content: center;
+    }
+
     .machine-holder {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: flex;
         position: relative;
         justify-content: center;
@@ -59,8 +64,8 @@
             background: #FFFFFF;
             box-shadow: 0px 0px 30px rgba(0, 48, 60, 0.1);
             border-radius: 30px;
-            gap: 40px;
-            padding-bottom: 40px;
+            gap: 30px;
+            padding-bottom: 30px;
 
             >:nth-child(1) {
                 width: 347px;
