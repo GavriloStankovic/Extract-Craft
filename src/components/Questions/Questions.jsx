@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -13,16 +13,6 @@ import arrowDown from "../../assets/arrow-down/arrow-down.svg";
 import arrowUp from "../../assets/arrow-up/arrow-up.svg";
 
 const Questions = () => {
-  const [expandedItems, setExpandedItems] = useState([0]);
-
-  const handleAccordionChange = (itemId) => {
-    if (expandedItems.includes(itemId)) {
-      setExpandedItems(expandedItems.filter((id) => id !== itemId));
-    } else {
-      setExpandedItems([...expandedItems, itemId]);
-    }
-  };
-
   return (
     <div className="questions-wrapper">
       <div className="questions-header">
@@ -33,8 +23,7 @@ const Questions = () => {
           allowZeroExpanded={true}
           className="accordion"
           allowMultipleExpanded={false}
-          preExpanded={expandedItems}
-          onChange={handleAccordionChange}
+          preExpanded={[0]}
         >
           {data.map((item, index) => (
             <AccordionItem className="accordionItem" key={index} uuid={index}>
