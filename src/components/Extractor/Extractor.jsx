@@ -1,4 +1,3 @@
-import React from "react";
 import "./Extractor.scss";
 import sugar from "../../assets/sugar.svg";
 import bears from "../../assets/bears.svg";

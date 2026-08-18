@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import "./Checkout.scss";
 import { BsArrowLeftCircleFill } from "react-icons/bs";

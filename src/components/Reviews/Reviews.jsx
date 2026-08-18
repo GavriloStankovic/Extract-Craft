@@ -1,4 +1,3 @@
-import React from "react";
 import "./Reviews.scss";
 import star from "../../assets/star/star.svg";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,5 +1,5 @@
 import machineArray from "../../utils/machineSlider";
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 const CartContext = createContext();
 

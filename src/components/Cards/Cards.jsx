@@ -1,4 +1,3 @@
-import React from "react";
 import "./Cards.scss";
 import white from "../../assets/white-honey.svg";
 import yellow from "../../assets/yellow-honey.svg";

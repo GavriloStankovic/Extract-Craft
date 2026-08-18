@@ -1,4 +1,3 @@
-import React from "react";
 import "./Concentration.scss";
 import { Fade, Flip } from "../Reveal/Reveal";
 

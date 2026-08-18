@@ -6,9 +6,8 @@ import Logo from "../../assets/logo/logo.svg?react";
 import Cart from "../../assets/cart/cart.svg?react";
 import ProfileIcon from "../../assets/profile-icon.svg?react";
 import HamburgerMenu from "../../assets/hamburger-menu.svg?react";
-import { useState } from "react";
 import { Fade } from "../Reveal/Reveal";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import CartPreview from "../CartPreview/CartPreview";
 

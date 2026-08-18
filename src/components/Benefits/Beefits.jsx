@@ -1,4 +1,3 @@
-import React from "react";
 import "./Benefits.scss";
 import benefits from "../../assets/benefits.svg";
 import { Flip } from "../Reveal/Reveal";

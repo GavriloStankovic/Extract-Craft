@@ -1,6 +1,5 @@
-import React from "react";
-import "./CartPreview.scss";
 import { useContext } from "react";
+import "./CartPreview.scss";
 import { CartContext } from "../../context/CartContext/CartContext";
 import { useNavigate } from "react-router";
 import { Fade } from "../Reveal/Reveal";

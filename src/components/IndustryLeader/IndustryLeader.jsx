@@ -1,4 +1,3 @@
-import React from "react";
 import "./IndustryLeader.scss";
 import bottles from "../../assets/bottles.svg";
 import { Fade } from "../Reveal/Reveal";

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import "./Machine.scss";
 import bottleLeft from "../../assets/leftBottle.svg";
