@@ -71,34 +71,22 @@ const Header = () => {
           <div className="mobile-menu-text">
             <ul>
               <li>
-                <a href="/extract-craft/src/components/Header/Header.jsx">
-                  MAKING YOUR OWN
-                </a>
+                <button type="button">MAKING YOUR OWN</button>
               </li>
               <li>
-                <a href="/extract-craft/src/components/Header/Header.jsx">
-                  SHOP
-                </a>
+                <button type="button">SHOP</button>
               </li>
               <li>
-                <a href="/extract-craft/src/components/Header/Header.jsx">
-                  RESOURCES
-                </a>
+                <button type="button">RESOURCES</button>
               </li>
               <li>
-                <a href="/extract-craft/src/components/Header/Header.jsx">
-                  CONTACT
-                </a>
+                <button type="button">CONTACT</button>
               </li>
               <li>
-                <a href="/extract-craft/src/components/Header/Header.jsx">
-                  SUPPORT
-                </a>
+                <button type="button">SUPPORT</button>
               </li>
               <li>
-                <a href="/extract-craft/src/components/Header/Header.jsx">
-                  PRODUCTS
-                </a>
+                <button type="button">PRODUCTS</button>
               </li>
             </ul>
           </div>

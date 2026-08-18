@@ -181,12 +181,17 @@
             gap: 45px;
             min-width: fit-content;
 
-            a {
+            button {
+                font-family: inherit;
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 24px;
                 text-decoration-line: underline;
                 color: #FFFFFF;
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
             }
         }
     }
@@ -262,7 +267,7 @@
             .links {
                 gap: 35px;
     
-                a {
+                button {
                     font-size: 16px;
                 }
             }
