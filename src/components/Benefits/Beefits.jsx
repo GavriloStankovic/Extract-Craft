@@ -1,7 +1,7 @@
 import React from "react";
 import "./Benefits.scss";
 import benefits from "../../assets/benefits.svg";
-import Flip from "react-reveal/Flip";
+import { Flip } from "../Reveal/Reveal";
 
 const Beefits = () => {
   return (

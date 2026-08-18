@@ -4,7 +4,7 @@ import "./Machine.scss";
 import bottleLeft from "../../assets/leftBottle.svg";
 import rightBottle from "../../assets/rightBottle.svg";
 import dashed from "../../assets/dashed.svg";
-import Fade from "react-reveal/Fade";
+import { Fade } from "../Reveal/Reveal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import machineArray from "../../utils/machineSlider";
 

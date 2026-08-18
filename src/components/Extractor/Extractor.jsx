@@ -3,7 +3,7 @@ import "./Extractor.scss";
 import sugar from "../../assets/sugar.svg";
 import bears from "../../assets/bears.svg";
 import honey from "../../assets/honey.svg";
-import { Slide } from "react-reveal";
+import { Slide } from "../Reveal/Reveal";
 
 const Extractor = () => {
   return (

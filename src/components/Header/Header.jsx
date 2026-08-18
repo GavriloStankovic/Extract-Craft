@@ -7,7 +7,7 @@ import { ReactComponent as Cart } from "../../assets/cart/cart.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/profile-icon.svg";
 import { ReactComponent as HamburgerMenu } from "../../assets/hamburger-menu.svg";
 import { useState } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "../Reveal/Reveal";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import CartPreview from "../CartPreview/CartPreview";

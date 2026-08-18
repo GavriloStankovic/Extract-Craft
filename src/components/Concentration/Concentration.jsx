@@ -1,7 +1,6 @@
 import React from "react";
 import "./Concentration.scss";
-import { Flip } from "react-reveal";
-import Fade from "react-reveal/Fade";
+import { Fade, Flip } from "../Reveal/Reveal";
 
 const Concentration = () => {
   return (

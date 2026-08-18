@@ -3,7 +3,7 @@ import "./Cards.scss";
 import white from "../../assets/white-honey.svg";
 import yellow from "../../assets/yellow-honey.svg";
 import blue from "../../assets/blue-honey.svg";
-import Fade from "react-reveal/Fade";
+import { Fade } from "../Reveal/Reveal";
 
 const Cards = () => {
   return (

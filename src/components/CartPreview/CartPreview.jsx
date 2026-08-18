@@ -3,7 +3,7 @@ import "./CartPreview.scss";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext/CartContext";
 import { useNavigate } from "react-router";
-import { Fade } from "react-reveal";
+import { Fade } from "../Reveal/Reveal";
 
 const CartPreview = () => {
   const { cartItems, resetCart, totalPrice } = useContext(CartContext);
