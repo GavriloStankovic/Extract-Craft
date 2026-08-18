@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# ExtractCraft
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Marketing site and shopping cart for ExtractCraft home extraction equipment, built with React 19 and Vite.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+Node.js 20.19 or newer (Vite 8 requirement).
 
-### `yarn start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm run dev
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The dev server runs on http://localhost:3000 and opens a browser automatically.
 
-### `yarn test`
+## Scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server with hot module replacement |
+| `npm run build` | Produce an optimised production build in `dist/` |
+| `npm run preview` | Serve the contents of `dist/` locally to check the build |
+| `npm run lint` | Run ESLint across the project |
+| `npm test` | Run the Vitest suite once |
+| `npm run test:watch` | Run Vitest in watch mode |
 
-### `yarn build`
+## Project layout
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+  assets/       images and SVGs
+  components/   one folder per component, each with its own .scss
+  context/      CartContext — cart items, totals, preview visibility
+  utils/        static content for the sliders and the FAQ accordion
+  test/         Vitest setup
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Routing lives in `src/App.jsx`: `/` renders the landing page and `/checkout`
+renders the cart.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Notes
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **SVGs** are imported two ways. `import icon from './icon.svg'` gives a URL for
+  use in `<img>`; `import Icon from './icon.svg?react'` compiles the file into a
+  React component via `vite-plugin-svgr`. Use the URL form for large artwork so
+  it stays out of the JavaScript bundle.
+- **Animations** come from `src/components/Reveal/Reveal.jsx`, a small
+  IntersectionObserver-based replacement for the abandoned `react-reveal`. It
+  clones its single child rather than wrapping it, and it honours
+  `prefers-reduced-motion`.
