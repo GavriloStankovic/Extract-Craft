@@ -1,11 +1,11 @@
 import "./Header.scss";
-import { ReactComponent as Instagram } from "../../assets/instagram/instagram.svg";
-import { ReactComponent as Facebook } from "../../assets/facebook/facebook.svg";
-import { ReactComponent as Tiktok } from "../../assets/tik-tok/tik-tok.svg";
-import { ReactComponent as Logo } from "../../assets/logo/logo.svg";
-import { ReactComponent as Cart } from "../../assets/cart/cart.svg";
-import { ReactComponent as ProfileIcon } from "../../assets/profile-icon.svg";
-import { ReactComponent as HamburgerMenu } from "../../assets/hamburger-menu.svg";
+import Instagram from "../../assets/instagram/instagram.svg?react";
+import Facebook from "../../assets/facebook/facebook.svg?react";
+import Tiktok from "../../assets/tik-tok/tik-tok.svg?react";
+import Logo from "../../assets/logo/logo.svg?react";
+import Cart from "../../assets/cart/cart.svg?react";
+import ProfileIcon from "../../assets/profile-icon.svg?react";
+import HamburgerMenu from "../../assets/hamburger-menu.svg?react";
 import { useState } from "react";
 import { Fade } from "../Reveal/Reveal";
 import { useContext } from "react";

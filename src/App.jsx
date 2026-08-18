@@ -11,7 +11,7 @@ import Machine from './components/Machine/Machine';
 import Questions from './components/Questions/Questions';
 import Reviews from './components/Reviews/Reviews';
 import { Route, Routes } from 'react-router';
-import { CartProvider } from './context/CartContext/CartContext'; 
+import { CartProvider } from './context/CartContext/CartContext';
 
 function App() {
   return (

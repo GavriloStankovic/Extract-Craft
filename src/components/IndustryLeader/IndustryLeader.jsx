@@ -1,6 +1,6 @@
 import React from "react";
 import "./IndustryLeader.scss";
-import { ReactComponent as Bottles } from "../../assets/bottles.svg";
+import Bottles from "../../assets/bottles.svg?react";
 import { Fade } from "../Reveal/Reveal";
 
 const IndustryLeader = () => {
