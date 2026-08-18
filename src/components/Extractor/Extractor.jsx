@@ -18,7 +18,7 @@ const Extractor = () => {
               <h2>Master Baker - With a Twist</h2>
               <span></span>
               <h3>
-                GETTING the perfect brownie BAKED can feel impossible. But we've
+                GETTING the perfect brownie BAKED can feel impossible. But we’ve
                 got you covered!
               </h3>
             </div>

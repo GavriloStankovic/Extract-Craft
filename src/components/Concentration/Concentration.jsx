@@ -8,7 +8,7 @@ const Concentration = () => {
         <div className="cocentration-header">
           <Flip left duration={2000}>
             <h1>
-              It's HIGH time you improved
+              It’s HIGH time you improved
               <br /> your concentration
             </h1>
           </Flip>
