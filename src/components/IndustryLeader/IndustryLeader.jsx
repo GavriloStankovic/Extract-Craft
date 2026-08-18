@@ -1,6 +1,6 @@
 import React from "react";
 import "./IndustryLeader.scss";
-import Bottles from "../../assets/bottles.svg?react";
+import bottles from "../../assets/bottles.svg";
 import { Fade } from "../Reveal/Reveal";
 
 const IndustryLeader = () => {
@@ -27,7 +27,7 @@ const IndustryLeader = () => {
           </div>
           <Fade bottom delay={2000}>
             <div className="right-side">
-              <Bottles />
+              <img src={bottles} alt="" />
             </div>
           </Fade>
         </div>
