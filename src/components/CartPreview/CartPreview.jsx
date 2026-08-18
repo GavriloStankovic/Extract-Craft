@@ -24,13 +24,7 @@ const CartPreview = () => {
                 <p>Quantity: {cartItem.quantity}</p>
                 <p>Price: {cartItem.price}</p>
               </div>
-              <button
-                onClick={() =>
-                  resetCart(cartItem.id, cartItem.price, cartItem.quantity)
-                }
-              >
-                X
-              </button>
+              <button onClick={() => resetCart(cartItem.id)}>X</button>
             </div>
           ))}
           <div className="cart-options">

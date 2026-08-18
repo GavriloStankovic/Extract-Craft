@@ -10,6 +10,8 @@ const CartProvider = ({ children }) => {
 
   const addToCart = (index) => {
     const item = machineArray[index];
+    if (!item) return;
+
     const existingItem = cartItems.find((cartItem) => cartItem.index === index);
 
     if (existingItem) {
@@ -47,7 +49,7 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  const resetCart = (id, price, quantity) => {
+  const resetCart = (id) => {
     const updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
     const newTotalPrice = updatedCartItems.reduce(
       (total, cartItem) => total + cartItem.price * cartItem.quantity,
