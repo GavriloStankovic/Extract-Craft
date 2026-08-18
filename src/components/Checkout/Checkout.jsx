@@ -28,14 +28,12 @@ const Checkout = () => {
       <h2>Your Shopping Cart</h2>
       {cartItems.map((item) => (
         <div key={item.id} className="checkout-items">
-          <img src={item.image} alt={item.name} />
+          <img src={item.image} alt={item.p1} />
           <p>{item.p1}</p>
           <div className="quantity-options">
             <BsArrowLeftCircleFill onClick={() => removeFromCart(item.id)} />
             <p>Quantity: {item.quantity}</p>
-            <BsArrowRightCircleFill
-              onClick={() => addToCart(item.id, item.quantity)}
-            />
+            <BsArrowRightCircleFill onClick={() => addToCart(item.id)} />
           </div>
           <p>Price per item: ${item.price}</p>
           <AiTwotoneDelete onClick={() => resetCart(item.id)} />
