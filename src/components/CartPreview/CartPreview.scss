@@ -23,6 +23,22 @@
         padding: 10px;
     }
 
+    .cart-items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .cart-empty {
+        margin: 0;
+        padding: 0 10px 10px;
+        text-align: center;
+        color: #00303C;
+    }
+
     .cart-item {
         display: flex;
         justify-content: space-around;
