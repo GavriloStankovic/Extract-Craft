@@ -18,8 +18,8 @@
             flex-direction: column;
             gap: 50px;
 
-            span {
-                margin-top: 8.33%;
+            .eyebrow {
+                margin: 8.33% 0 0;
                 font-weight: 600;
                 font-size: 30px;
                 line-height: 37px;
@@ -57,7 +57,7 @@
         .industryLeader{
             gap: 90px;
             .industry-left{
-                span {
+                .eyebrow {
                     font-size: 28px;
                     line-height: 30px;
                 }
@@ -106,8 +106,9 @@
                 justify-content: center;
                 align-items: center;
 
-                span {
+                .eyebrow {
                     margin-top: 50px;
+                    margin-bottom: 0;
                 }
 
                 h1{
@@ -138,7 +139,7 @@
         .container{
             .industryLeader{
                 .industry-left{
-                    span{
+                    .eyebrow{
                     font-size: 22px;
                     line-height: 26px;
                     }
@@ -159,7 +160,7 @@
             .container{
             .industryLeader{
                 .industry-left{
-                    span{
+                    .eyebrow{
                         font-size: 22px;
                         padding: 0 20px;
                         text-align: center;
