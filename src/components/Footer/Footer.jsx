@@ -3,16 +3,30 @@ import facebook from "../../assets/facebook/facebook.svg";
 import instagram from "../../assets/instagram/instagram.svg";
 import tiktok from "../../assets/tik-tok/tik-tok.svg";
 
+const SOCIALS = [
+  { src: facebook, name: "Facebook" },
+  { src: instagram, name: "Instagram" },
+  { src: tiktok, name: "TikTok" },
+];
+
+const TABLE_LINKS = ["BUY ONLINE", "VIDEOS", "COMMUNITY", "BUY ONLINE"];
+
+const SocialIcons = ({ className }) => (
+  <ul className={className}>
+    {SOCIALS.map((social) => (
+      <li key={social.name}>
+        <img src={social.src} alt={social.name} width={33.8} height={33.8} />
+      </li>
+    ))}
+  </ul>
+);
+
 const Footer = () => {
   return (
-    <div className="footer-wrapper">
+    <footer className="footer-wrapper">
       <div className="footer-connected">
         <h2>Let’s Stay Connected!</h2>
-        <div className="icons">
-          <img src={facebook} alt="" width={33.8} height={33.8} />
-          <img src={instagram} alt="" width={33.8} height={33.8} />
-          <img src={tiktok} alt="" width={33.8} height={33.8} />
-        </div>
+        <SocialIcons className="icons" />
       </div>
       <div className="footer-text">
         <p>
@@ -20,34 +34,32 @@ const Footer = () => {
           team, including the latest extraction recipes, products, and Xcrafter
           news.
         </p>
-        <p>info@extractcraft.com</p>
+        <a href="mailto:info@extractcraft.com">info@extractcraft.com</a>
       </div>
-      <div className="footer-email">
-        <input type="email" placeholder="Vaša e-mail adresa" />
-        <button>Submit</button>
-      </div>
-      <div className="footer-tabel">
-        <div>
-          <h1>BUY ONLINE</h1>
-        </div>
-        <div>
-          <h1>VIDEOS</h1>
-        </div>
-        <div>
-          <h1>COMMUNITY</h1>
-        </div>
-        <div>
-          <h1>BUY ONLINE</h1>
-        </div>
-      </div>
-      <div className="hidden-footer-icons">
-        <img src={facebook} alt="" width={33.8} height={33.8} />
-        <img src={instagram} alt="" width={33.8} height={33.8} />
-        <img src={tiktok} alt="" width={33.8} height={33.8} />
-      </div>
+      <form className="footer-email" onSubmit={(event) => event.preventDefault()}>
+        <label className="visually-hidden" htmlFor="newsletter-email">
+          Your email address
+        </label>
+        <input
+          id="newsletter-email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          placeholder="Your email address"
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <ul className="footer-tabel">
+        {TABLE_LINKS.map((label, index) => (
+          <li key={`${label}-${index}`}>{label}</li>
+        ))}
+      </ul>
+      <SocialIcons className="hidden-footer-icons" />
       <div className="footer-links">
-        <p>info@extractcraft.com</p>
-        <h3>© 2023 ExtractCraft LLC</h3>
+        <a className="footer-email-link" href="mailto:info@extractcraft.com">
+          info@extractcraft.com
+        </a>
+        <p className="copyright">© 2023 ExtractCraft LLC</p>
         <div className="links">
           <button type="button">FAQs</button>
           <button type="button">Careers</button>
@@ -56,14 +68,14 @@ const Footer = () => {
         </div>
       </div>
       <div className="hidden-h3">
-        <h3>© 2023 ExtractCraft LLC</h3>
+        <p className="copyright">© 2023 ExtractCraft LLC</p>
       </div>
       <div className="last">
-        <h3>
+        <p>
           Website Design by <span>Winnow Creative</span>
-        </h3>
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

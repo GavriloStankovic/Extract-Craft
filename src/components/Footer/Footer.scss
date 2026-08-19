@@ -29,6 +29,9 @@
         .icons {
             display: flex;
             gap: 40.8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
     }
 
@@ -102,6 +105,8 @@
 
     .footer-tabel {
         margin-top: 30px;
+        padding: 0;
+        list-style: none;
         display: flex;
         align-items: center;
         width: 77.6%;
@@ -142,7 +147,7 @@
             justify-content: center;
         }
 
-        h1 {
+        li {
             font-weight: 700;
             font-size: 24px;
             line-height: 29px;
@@ -153,6 +158,9 @@
 
     .hidden-footer-icons{
         display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
     .footer-links {
@@ -167,7 +175,7 @@
             display: none;
         }
 
-        h3 {
+        .copyright {
             max-width: 244px;
             font-weight: 600;
             font-size: 20px;
@@ -203,7 +211,7 @@
         margin-left: 11.3%;
         display: flex;
 
-        h3 {
+        p {
             font-weight: 600;
             font-size: 18px;
             line-height: 22px;
@@ -251,16 +259,16 @@
     
         .footer-tabel {      
             height: 70px;
-            h1 {
+            li {
                 font-size: 20px;
             }
         }
     
         .footer-links {
-            p{
+            .footer-email-link{
                 display: none;
             }
-            h3 {
+            .copyright {
                 font-size: 16px;
             }
             
@@ -273,7 +281,7 @@
             }
         }
         .last {
-            h3 {
+            p {
                 font-size: 14px;
             }
         }
@@ -313,26 +321,26 @@
     
         .footer-tabel {      
             height: 60px;
-            h1 {
+            li {
                 font-size: 16px;
             }
         }
     
         .footer-links {
-            h3 {
+            .copyright {
                 font-size: 12px;
             }
             
             .links {
                 gap: 25px;
     
-                a {
+                button {
                     font-size: 12px;
                 }
             }
         }
         .last {
-            h3 {
+            p {
                 font-size: 10px;
             }
         }
@@ -412,7 +420,7 @@
             margin-left: 0;
             margin-top: 0;
 
-            p{
+            .footer-email-link{
                 display: flex;
                 font-size: 18px;
                 line-height: 22px;
@@ -420,7 +428,7 @@
                 font-weight: 600;
             }
 
-            h3{
+            .copyright{
                 display: none;
             }
             .links{
@@ -430,7 +438,7 @@
                 justify-content: center;
                 align-items: center;
 
-                a{
+                button{
                     font-size: 16px;
                     line-height: 20px;
                     font-weight: 400;
@@ -443,7 +451,7 @@
             align-items: center;
             width: 100%;
 
-            h3{
+            .copyright{
                 font-weight: 600;
                 font-size: 26px;
                 line-height: 24px;
@@ -455,7 +463,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            h3{
+            p{
                 font-size: 19px;
                 max-width: 360px;
                 text-align: center;
@@ -538,7 +546,7 @@
             margin-left: 0;
             margin-top: 0;
 
-            p{
+            .footer-email-link{
                 display: flex;
                 font-size: 18px;
                 line-height: 22px;
@@ -546,7 +554,7 @@
                 font-weight: 600;
             }
 
-            h3{
+            .copyright{
                 display: none;
             }
             .links{
@@ -556,7 +564,7 @@
                 justify-content: center;
                 align-items: center;
 
-                a{
+                button{
                     font-size: 16px;
                     line-height: 20px;
                     font-weight: 400;
@@ -569,7 +577,7 @@
             align-items: center;
             width: 100%;
 
-            h3{
+            .copyright{
                 font-weight: 600;
                 font-size: 20px;
                 line-height: 24px;
@@ -581,7 +589,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            h3{
+            p{
                 font-size: 18px;
                 max-width: 252px;
                 text-align: center;
