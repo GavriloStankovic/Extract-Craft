@@ -13,9 +13,9 @@ import arrowUp from "../../assets/arrow-up/arrow-up.svg";
 
 const Questions = () => {
   return (
-    <div className="questions-wrapper">
+    <section className="questions-wrapper" aria-labelledby="questions-heading">
       <div className="questions-header">
-        <h1>Frequently Asked Questions</h1>
+        <h2 id="questions-heading">Frequently Asked Questions</h2>
       </div>
       <div className="questions">
         <Accordion
@@ -25,10 +25,12 @@ const Questions = () => {
           preExpanded={[0]}
         >
           {data.map((item, index) => (
-            <AccordionItem className="accordionItem" key={index} uuid={index}>
-              <AccordionItemHeading>
+            <AccordionItem className="accordionItem" key={item.heading} uuid={index}>
+              {/* The heading role and level live on AccordionItemHeading, so the
+                  question itself must not be another heading element. */}
+              <AccordionItemHeading aria-level={3}>
                 <AccordionItemButton className="accordionButton">
-                  <h2>{item.heading}</h2>
+                  <span className="accordion-title">{item.heading}</span>
                   <AccordionItemState>
                     {({ expanded }) =>
                       expanded ? (
@@ -47,7 +49,7 @@ const Questions = () => {
           ))}
         </Accordion>
       </div>
-    </div>
+    </section>
   );
 };
 
