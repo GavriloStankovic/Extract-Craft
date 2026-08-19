@@ -17,31 +17,41 @@ function App() {
   return (
     <div className="App">
       <CartProvider>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Header />
-              <IndustryLeader />
-              <Cards />
-              <Concentration />
-              <Extractor />
-              <Beefits />
-              <Machine  />
-              <Reviews />
-              <Questions />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/checkout" element={
-          <>
-          <Header />
-          <Checkout />
-          </>
-        } />
-      </Routes>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <main id="main-content" tabIndex={-1}>
+                  <IndustryLeader />
+                  <Cards />
+                  <Concentration />
+                  <Extractor />
+                  <Beefits />
+                  <Machine />
+                  <Reviews />
+                  <Questions />
+                </main>
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <>
+                <Header />
+                <main id="main-content" tabIndex={-1}>
+                  <Checkout />
+                </main>
+              </>
+            }
+          />
+        </Routes>
       </CartProvider>
     </div>
   );
