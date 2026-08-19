@@ -55,9 +55,45 @@ test('the cart icon toggles the cart preview', async () => {
   const user = userEvent.setup();
   renderHeader();
 
-  expect(screen.queryByText('Your Cart')).not.toBeInTheDocument();
+  // One button per breakpoint layout; only one of them is ever visible.
+  const [cartButton] = screen.getAllByRole('button', { name: /cart/i });
 
-  await user.click(document.querySelectorAll('.header svg')[1]);
+  expect(screen.queryByText('Your Cart')).not.toBeInTheDocument();
+  expect(cartButton).toHaveAttribute('aria-expanded', 'false');
+
+  await user.click(cartButton);
 
   expect(screen.getByText('Your Cart')).toBeInTheDocument();
+  expect(cartButton).toHaveAttribute('aria-expanded', 'true');
+});
+
+test('the hamburger button reports the state of the mobile menu', async () => {
+  const user = userEvent.setup();
+  renderHeader();
+
+  const menuButton = screen.getByRole('button', { name: 'Menu' });
+  const menu = document.getElementById('mobile-menu');
+
+  expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+  expect(menu).toHaveAttribute('inert');
+
+  await user.click(menuButton);
+
+  expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+  expect(menu).not.toHaveAttribute('inert');
+});
+
+test('escape closes the mobile menu and restores focus to its button', async () => {
+  const user = userEvent.setup();
+  renderHeader();
+
+  const menuButton = screen.getByRole('button', { name: 'Menu' });
+  await user.click(menuButton);
+
+  expect(screen.getByRole('button', { name: 'Close menu' })).toHaveFocus();
+
+  await user.keyboard('{Escape}');
+
+  expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+  expect(menuButton).toHaveFocus();
 });
