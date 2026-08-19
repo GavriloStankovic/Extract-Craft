@@ -12,7 +12,7 @@
         justify-content: space-between;
         align-items: center;
 
-        h1 {
+        h2 {
             font-weight: 600;
             font-size: 40px;
             line-height: 49px;
@@ -39,13 +39,19 @@
             gap: 50px;
             justify-content: flex-start;
             align-items: flex-start;
+            margin: 0;
+            padding: 0;
+            list-style: none;
 
-            span {
+            li {
                 width: -webkit-fill-available;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
-                align-items: center;
+                // flex-start keeps the marker on the first line of wrapped copy,
+                // the way the inline bullet used to sit.
+                align-items: flex-start;
+                gap: 8px;
                 padding: 30px 40px 30px 25px;
                 border: 3px solid #ffc600;
                 border-radius: 15px;
@@ -53,6 +59,12 @@
                 font-size: 20px;
                 line-height: 24px;
                 color: #00303c;
+
+                // The bullet used to be part of the copy; now that these are real
+                // list items it is decoration, so CSS draws it instead.
+                &::before {
+                    content: "\2022";
+                }
             }
         }
         .button-hidden {
@@ -64,7 +76,7 @@
     .concentration-wrapper {
         margin-top: 90px;
         .cocentration-header {
-            h1 {
+            h2 {
                 margin: 0;
                 font-size: 36px;
             }
@@ -80,7 +92,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            h1 {
+            h2 {
                 text-align: center;
                 font-size: 30px;
             }
@@ -99,7 +111,7 @@
             .concentration-right {
                 width: 90%;
 
-                span{
+                li{
                     font-size: 14px;
                     line-height: 17px;
                 }
@@ -129,7 +141,7 @@
     .concentration-wrapper {
         gap: 40px;
         .cocentration-header {
-            h1 {
+            h2 {
                 font-size: 20px;
                 line-height: 24px;
                 text-align: center;
