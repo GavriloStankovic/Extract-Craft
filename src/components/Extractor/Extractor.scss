@@ -15,7 +15,7 @@
         width: auto;
         height: auto;
 
-        h1 {
+        h2 {
             margin: 0;
             font-weight: 600;
             font-size: 40px;
@@ -26,7 +26,9 @@
     }
 
     .extractor-cards {
-        margin-top: 90px;
+        margin: 90px 0 0;
+        padding: 0;
+        list-style: none;
         display: flex;
         gap: 5.20%;
         height: auto;
@@ -53,7 +55,7 @@
                 margin: 20px 20px 0 20px;
             }
 
-            h2 {
+            h3 {
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 29px;
@@ -61,13 +63,13 @@
                 margin: 0 20px;
             }
 
-            span {
+            .divider {
                 width: 347px;
                 border: 1px solid #00303C;
                 margin: 0 20px;
             }
 
-            h3 {
+            .card-text {
                 padding-bottom: 40px;
                 font-weight: 400;
                 font-size: 18px;
@@ -85,7 +87,7 @@
 @media screen and (max-width: 1500px){
     .extractor-wrapper{
         .extractor-header{
-            h1{
+            h2{
                 font-size: 30px;
                 padding: 0 20px;
             }
@@ -101,16 +103,16 @@
                     margin: 20px 20px 0 20px;
                 }
     
-                h2 {
+                h3 {
                     font-size: 18px;
                     line-height: 22px;
                 }
     
-                span {
+                .divider {
                     width: 243px;
                 }
     
-                h3 {
+                .card-text {
                     font-size: 14px;
                     line-height: 17px;
                 }
@@ -146,7 +148,7 @@
         margin-top: 60px;
         gap: 40px;
         .extractor-header{
-            h1{
+            h2{
                 font-size: 20px;
                 line-height: 24px;
             }

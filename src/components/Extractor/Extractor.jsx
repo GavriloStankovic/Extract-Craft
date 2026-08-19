@@ -4,47 +4,54 @@ import bears from "../../assets/bears.svg";
 import honey from "../../assets/honey.svg";
 import { Slide } from "../Reveal/Reveal";
 
+const EXTRACTOR_CARDS = [
+  {
+    className: "extractor-left",
+    image: sugar,
+    alt: "Freshly baked brownies dusted with sugar",
+    title: "Master Baker - With a Twist",
+    text: "GETTING the perfect brownie BAKED can feel impossible. But we’ve got you covered!",
+    duration: 800,
+  },
+  {
+    className: "extractor-center",
+    image: bears,
+    alt: "A handful of home made gummy bears",
+    title: "Edibles Made Easy",
+    text: "Make ANYTHING into gummy bears with our easy-to-use extraction machine!",
+    duration: 1000,
+  },
+  {
+    className: "extractor-right",
+    image: honey,
+    alt: "A jar of golden concentrate with a honey dipper",
+    title: "Shattering Expectations",
+    text: "High-quality end products from extraordinary materials.",
+    duration: 1200,
+  },
+];
+
 const Extractor = () => {
   return (
-    <div className="extractor-wrapper">
+    <section className="extractor-wrapper" aria-labelledby="extractor-heading">
       <div className="container">
         <div className="extractor-header">
-          <h1>The #1 Rated Botanical Extractor</h1>
+          <h2 id="extractor-heading">The #1 Rated Botanical Extractor</h2>
         </div>
-        <div className="extractor-cards">
-          <Slide left duration={800}>
-            <div className="extractor-left">
-              <img src={sugar} alt="" />
-              <h2>Master Baker - With a Twist</h2>
-              <span></span>
-              <h3>
-                GETTING the perfect brownie BAKED can feel impossible. But we’ve
-                got you covered!
-              </h3>
-            </div>
-          </Slide>
-          <Slide left duration={1000}>
-            <div className="extractor-center">
-              <img src={bears} alt="" />
-              <h2>Edibles Made Easy</h2>
-              <span></span>
-              <h3>
-                Make ANYTHING into gummy bears with our easy-to-use extraction
-                machine!
-              </h3>
-            </div>
-          </Slide>
-          <Slide left duration={1200}>
-            <div className="extractor-right">
-              <img src={honey} alt="" />
-              <h2>Shattering Expectations</h2>
-              <span></span>
-              <h3>High-quality end products from extraordinary materials.</h3>
-            </div>
-          </Slide>
-        </div>
+        <ul className="extractor-cards">
+          {EXTRACTOR_CARDS.map((card) => (
+            <Slide key={card.className} left duration={card.duration}>
+              <li className={card.className}>
+                <img src={card.image} alt={card.alt} />
+                <h3>{card.title}</h3>
+                <span className="divider" aria-hidden="true" />
+                <p className="card-text">{card.text}</p>
+              </li>
+            </Slide>
+          ))}
+        </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
