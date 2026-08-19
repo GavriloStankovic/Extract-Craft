@@ -13,7 +13,7 @@
         align-items: center;
         justify-content: center;
 
-        h1 {
+        h2 {
             font-weight: 600;
             font-size: 40px;
             line-height: 49px;
@@ -78,14 +78,31 @@
                 margin: 0 20px;
             }
 
-            p {
-                margin: 0 20px 0 17px;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
+            .machine-points {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    gap: 8px;
+                    margin: 0 20px 0 17px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+
+                    // The bullet was hard coded into the copy before these became
+                    // real list items.
+                    &::before {
+                        content: "\2022";
+                    }
+                }
             }
 
-            h1 {
+            .machine-price {
                 font-weight: 600;
                 font-size: 32px;
                 line-height: 39px;
@@ -125,7 +142,7 @@
     .machine-wrapper{
         margin-top: 60px;
         .machine-header{
-            h1{
+            h2{
                 font-size: 30px;
                 padding: 0 20px;
             }
@@ -146,7 +163,7 @@
         margin-top: 80px;
         .machine-header{
             width: 90%;
-            h1{
+            h2{
                 padding: 0 20px;
                 margin: 0;
                 font-size: 20px;
@@ -170,12 +187,12 @@
                     align-self: center;
                 }
     
-                p {
+                .machine-points li {
                     font-size: 16px;
                     line-height: 20px;
                 }
     
-                h1 {
+                .machine-price {
                     font-size: 32px;
                     line-height: 39px;
                 }

@@ -6,15 +6,16 @@ import rightBottle from "../../assets/rightBottle.svg";
 import dashed from "../../assets/dashed.svg";
 import { Fade } from "../Reveal/Reveal";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, Keyboard } from "swiper/modules";
 import machineArray from "../../utils/machineSlider";
 
 const Machine = () => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div className="machine-wrapper">
+    <section className="machine-wrapper" aria-labelledby="machine-heading">
       <div className="machine-header">
-        <h1>Home Kitchen or Small Business? We got you</h1>
+        <h2 id="machine-heading">Home Kitchen or Small Business? We got you</h2>
       </div>
       <div className="machine-holder">
         <Fade left duration={1600}>
@@ -23,30 +24,40 @@ const Machine = () => {
         <Fade right duration={1600}>
           <img src={rightBottle} alt="" />
         </Fade>
-        <Swiper>
+        <Swiper
+          modules={[A11y, Keyboard]}
+          keyboard={{ enabled: true }}
+          a11y={{
+            containerRole: "group",
+            containerRoleDescriptionMessage: "carousel",
+            containerMessage: "Extraction machines",
+          }}
+        >
           {machineArray.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="machine-card">
-                <img src={item.image} alt="" />
+            <SwiperSlide key={item.p1}>
+              <article className="machine-card" aria-label={item.p1}>
+                <img src={item.image} alt={item.p1} />
                 <img src={dashed} alt="" />
-                <p>&bull; {item.p1}</p>
-                <p>
-                  &bull; {item.p2}
-                  <br />
-                </p>
-                <p>
-                  &bull; {item.p3}
-                  <br />
-                </p>
-                <p>&bull; {item.p4}</p>
-                <h1>${item.price}</h1>
-                <button onClick={() => addToCart(index)}>BUY NOW</button>
-              </div>
+                <ul className="machine-points">
+                  <li>{item.p1}</li>
+                  <li>{item.p2}</li>
+                  <li>{item.p3}</li>
+                  <li>{item.p4}</li>
+                </ul>
+                <p className="machine-price">${item.price}</p>
+                <button
+                  type="button"
+                  onClick={() => addToCart(index)}
+                  aria-label={`BUY NOW — ${item.p1}, $${item.price}`}
+                >
+                  BUY NOW
+                </button>
+              </article>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 
