@@ -4,18 +4,23 @@ import { Flip } from "../Reveal/Reveal";
 
 const Beefits = () => {
   return (
-    <div className="container benefits-wrapper">
+    <section className="container benefits-wrapper" aria-labelledby="benefits-heading">
+      {/* The narrow layout moves the heading above the illustration; only one of
+          the two is ever displayed, the other is removed by `display: none`. */}
       <div className="hidden-benefits">
         <Flip top>
-          <h1>Health Benefits</h1>
+          <h2>Health Benefits</h2>
         </Flip>
       </div>
       <div className="benefits-image">
-        <img src={benefits} alt="" />
+        <img
+          src={benefits}
+          alt="Bottles of essential oil, a relief cream and a tincture dropper"
+        />
       </div>
       <div className="benefits-text">
         <Flip top delay={200}>
-          <h1>Health Benefits</h1>
+          <h2 id="benefits-heading">Health Benefits</h2>
         </Flip>
         <Flip top delay={600}>
           <p>
@@ -35,31 +40,33 @@ const Beefits = () => {
         </Flip>
         <Flip top delay={1800}>
           <div className="options">
-            <div>
-              <p>
-                <span>-</span> Relief Creams
-              </p>
-              <p>
-                <span>-</span> Tinctures
-              </p>
-            </div>
-            <div>
-              <p>
-                <span>-</span> Magic Butter
-              </p>
-              <p>
-                <span>-</span> Edibles
-              </p>
-            </div>
+            <ul>
+              <li>
+                <span aria-hidden="true">-</span> Relief Creams
+              </li>
+              <li>
+                <span aria-hidden="true">-</span> Tinctures
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span aria-hidden="true">-</span> Magic Butter
+              </li>
+              <li>
+                <span aria-hidden="true">-</span> Edibles
+              </li>
+            </ul>
           </div>
         </Flip>
         <Flip top delay={2400}>
           <div>
-            <button className="primary">SHOP NOW</button>
+            <button type="button" className="primary">
+              SHOP NOW
+            </button>
           </div>
         </Flip>
       </div>
-    </div>
+    </section>
   );
 };
 
