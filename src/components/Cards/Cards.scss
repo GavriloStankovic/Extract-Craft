@@ -12,6 +12,9 @@
 
     .cards {
         height: auto;
+        margin: 0;
+        padding: 0;
+        list-style: none;
         width: max-content;
         z-index: 1;
         display: flex;
@@ -40,7 +43,7 @@
                 object-fit: cover;
             }
 
-            h3 {
+            .card-title {
                 display: flex;
                 align-items: center;
                 font-weight: 600;
@@ -50,12 +53,12 @@
                 margin: 0 20px;
             }
 
-            span {
+            .divider {
                 border: 1px solid #00303C;
                 width: 347px;
             }
 
-            h4 {
+            .card-text {
                 margin: 0 20px 40px 20px;
                 height: 79px;
                 font-weight: 400;
@@ -83,17 +86,17 @@
                     object-fit: contain;
                 }
     
-                h3 {
+                .card-title {
                     font-size: 18px;
                     line-height: 22px;
                 }
     
-                span {
+                .divider {
                     border: 1px solid #00303C;
                     width: 243px;
                 }
     
-                h4 {
+                .card-text {
                     font-size: 14px;
                     line-height: 17px;
                 }
@@ -130,17 +133,17 @@
                     object-fit: contain;
                 }
     
-                h3 {
+                .card-title {
                     font-size: 18px;
                     line-height: 22px;
                 }
     
-                span {
+                .divider {
                     border: 1px solid #00303C;
                     width: 243px;
                 }
     
-                h4 {
+                .card-text {
                     font-size: 14px;
                     line-height: 17px;
                 }
