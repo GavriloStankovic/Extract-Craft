@@ -12,7 +12,7 @@
         justify-content: space-between;
         align-items: center;
 
-        h1 {
+        h2 {
             font-weight: 600;
             font-size: 40px;
             line-height: 49px;
@@ -53,7 +53,7 @@
                 align-items: center;
                 gap: 40px;
 
-                h1 {
+                h3 {
                     font-weight: 600;
                     font-size: 24px;
                     line-height: 29px;
@@ -74,7 +74,7 @@
                     text-align: center;
                 }
 
-                h2 {
+                .review-date {
                     font-weight: 600;
                     font-size: 18px;
                     line-height: 22px;
@@ -91,7 +91,7 @@
 @media screen and (max-width: 1650px) {
     .reviews-wrapper{
         .reviews-header{
-            h1{
+            h2{
                 font-size: 34px;
             }
             button {
@@ -105,7 +105,7 @@
 @media screen and (max-width: 900px) {
     .reviews-wrapper{
         .reviews-header{
-            h1{
+            h2{
                 font-size: 28px;
             }
             button {
@@ -125,7 +125,7 @@
             justify-content: center;
             align-items: center;
 
-            h1{
+            h2{
                 font-size: 20px;
                 line-height: 24px;
             }
@@ -137,7 +137,7 @@
         .swiper-horizontal{
             .swiper-wrapper{
                 .reviews-card{
-                    h1{
+                    h3{
                         font-size: 18px;
                         line-height: 22px;
                     }
